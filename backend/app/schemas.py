@@ -6,7 +6,7 @@ Keep these in sync with frontend/src/types/waitlist.ts.
 import uuid
 from datetime import datetime
 
-from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator
+from pydantic import BaseModel, EmailStr, Field
 
 
 class WaitlistCreate(BaseModel):
@@ -18,17 +18,15 @@ class WaitlistCreate(BaseModel):
     country: str = Field(min_length=1, max_length=100)
     whatsapp_number: str = Field(min_length=6, max_length=30)
 
-    @field_validator("first_name", "last_name", "country")
-    @classmethod
-    def strip_whitespace(cls, v: str) -> str:
+    @validator("first_name", "last_name", "country")
+    def strip_whitespace(cls, v):
         v = v.strip()
         if not v:
             raise ValueError("This field cannot be empty.")
         return v
 
-    @field_validator("whatsapp_number")
-    @classmethod
-    def basic_phone_shape(cls, v: str) -> str:
+    @validator("whatsapp_number")
+    def basic_phone_shape(cls, v):
         # Deliberately loose here — full validation (phonenumbers lib) is a Phase 2 item,
         # see INSTRUCTIONS_FOR_AI_AGENT.md. This just blocks obvious junk input.
         cleaned = v.strip().replace(" ", "")
@@ -39,10 +37,14 @@ class WaitlistCreate(BaseModel):
             raise ValueError("WhatsApp number looks too short — include your country code.")
         return cleaned
 
+    class Config:
+        # Pydantic v1 equivalent of ConfigDict
+        # We don't need from_attributes here because we are not using ORM mode in this model?
+        # Actually, WaitlistResponse uses orm_mode. We'll add it there.
+        pass
+
 
 class WaitlistResponse(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
-
     id: uuid.UUID
     first_name: str
     email: EmailStr
@@ -50,8 +52,14 @@ class WaitlistResponse(BaseModel):
     currency_tag: str
     created_at: datetime
 
+    class Config:
+        orm_mode = True
+
 
 class WaitlistStats(BaseModel):
     total_signups: int
     ngn_audience: int
     usd_audience: int
+
+    class Config:
+        pass

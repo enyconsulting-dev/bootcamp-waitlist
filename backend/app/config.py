@@ -4,11 +4,13 @@ Central app configuration. Loads from environment variables / .env file.
 Never hardcode secrets here — this file only defines WHERE to read them from.
 """
 from functools import lru_cache
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    class Config:
+        env_file = ".env"
+        extra = "ignore"
 
     # --- App ---
     ENVIRONMENT: str = "development"  # development | production
