@@ -3,17 +3,27 @@ FROM python:3.14-slim
 
 WORKDIR /app
 
-# Set environment variable for Cargo to use a writable directory (just in case)
-ENV CARGO_HOME=/tmp/cargo-home
-RUN mkdir -p $CARGO_HOME && chmod 777 $CARGO_HOME
-
-# System deps for asyncpg build (usually not needed as wheels exist, but safe to keep minimal)
+# Install system dependencies for building Python packages with Rust extensions
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    rustc \
+    cargo \
+    libssl-dev \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
+# Create writable directories for Rust/Cargo to avoid read-only file system issues
+# Redirect ALL Rust/Cargo directories to writable locations in /tmp
+ENV CARGO_HOME=/tmp/cargo-home
+ENV RUSTUP_HOME=/tmp/rustup-home
+ENV HOME=/tmp/home
+RUN mkdir -p /tmp/cargo-home /tmp/rustup-home /tmp/home && \
+    chmod -R 777 /tmp/cargo-home /tmp/rustup-home /tmp/home
+
+# Install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir --only-binary :all: -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
 
 COPY app ./app
 
