@@ -1,10 +1,18 @@
 import Hero from "./components/sections/Hero";
+import Video from "./components/sections/Video";
+import AwarenessProblem from "./components/sections/AwarenessProblem";
+import ThePromise from "./components/sections/ThePromise";
+import Curriculum from "./components/sections/Curriculum";
 import WaitlistForm from "./components/WaitlistForm";
 
 function App() {
   return (
     <div className="page-shell">
       <Hero />
+      <Video />
+      <AwarenessProblem />
+      <ThePromise />
+      <Curriculum />
 
       <section className="optin-section" id="waitlist-form">
         <div className="optin-container">

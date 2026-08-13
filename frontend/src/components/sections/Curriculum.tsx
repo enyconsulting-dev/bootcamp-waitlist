@@ -3,215 +3,289 @@
 export default function Curriculum() {
   const weeks = [
     {
-      title: "Week 1: Your Senior Consulting Offer",
-      summary: "Days 1–7 · Deliverable: The Senior Offer Suite",
-      body:
-        "This week, you stop thinking like an employee and start thinking like a consultant. You define your expertise, identify the expensive problem you solve, and package it into a high-ticket offer priced for ROI.",
-      bullets: [
+      week: 1,
+      title: "Your Senior Consulting Offer",
+      days: "Days 1–7",
+      topics: [
         "The senior-consultant mindset shift",
         "Defining your expertise and ideal client with precision",
+        "Identifying the expensive problem you solve — and pricing for it",
         "Packaging a high-ticket offer that clients can say yes to",
-        "Building proof using AI — fast",
+        "Building your proof portfolio using AI — fast"
       ],
+      deliverable: "The Senior Offer Suite — a fully packaged consulting offer with positioning, pricing, and proof."
     },
     {
-      title: "Week 2: Authority & Visibility",
-      summary: "Days 8–14 · Deliverable: LinkedIn Overhaul + First Post Published",
-      body:
-        "The best offer in the world means nothing if no one knows you exist. This week, you build the digital presence that makes decision-makers take you seriously before you ever send a message.",
-      bullets: [
+      week: 2,
+      title: "Authority & Visibility",
+      days: "Days 8–14",
+      topics: [
         "Personal branding strategy for consultants",
-        "LinkedIn profile mastery",
-        "AI-assisted thought leadership content",
-        "Organic networking with the people who write the checks",
+        "LinkedIn profile mastery — every section, optimized",
+        "AI-assisted thought-leadership content that builds authority fast",
+        "Organic networking with the people who actually write the checks"
       ],
+      deliverable: "Your LinkedIn profile overhauled + your first authority post published."
     },
     {
-      title: "Week 3: Landing Clients",
-      summary: "Days 15–21 · Deliverable: Outreach Sprint — Target List + Custom Pitches",
-      body:
-        "This is where most programs stop. We do not. You build a real lead list and learn how to reach the right decision-makers in a way that feels value-first, not spammy.",
-      bullets: [
-        "Targeted lead list building",
-        "Value-first outreach and social selling",
-        "Clear positioning in one sentence",
-        "Follow-up sequences that keep conversations alive",
+      week: 3,
+      title: "Landing Clients",
+      days: "Days 15–21",
+      topics: [
+        "Building a targeted lead list of the right decision-makers",
+        "Value-first outreach and social selling that doesn't feel desperate",
+        "How to communicate your value in one clear sentence",
+        "Follow-up sequences that keep conversations alive and moving"
       ],
+      deliverable: "Your Outreach Sprint — a live target list and customized pitch messages ready to send."
     },
     {
-      title: "Week 4: Winning the Client",
-      summary: "Days 22–30 · Deliverable: Proposal + Live Mock Discovery Call",
-      body:
-        "You learn the consulting discovery-call framework, how to position solutions, and how to price with confidence while handling objections without flinching.",
-      bullets: [
-        "Consulting discovery-call structure",
-        "Diagnosing the problem and presenting the solution",
-        "Moving from discovery to proposal",
-        "Handling objections with confidence",
+      week: 4,
+      title: "Winning the Client",
+      days: "Days 22–30",
+      topics: [
+        "Discovery call framework — the exact questions to ask",
+        "Handling objections like a pro — real client scenarios, real techniques",
+        "Proposal writing that converts (templates and examples)",
+        "Pricing psychology (why people say yes — and why they don't)"
       ],
-    },
+      deliverable: "A Proposal + Live Mock Discovery Call — ready to land your first client."
+    }
   ];
 
   return (
-    <section
+    <section className="bg-cream py-20 px-6"
       style={{
-        backgroundColor: "#F7F8FA",
-        padding: "80px 20px",
+        backgroundColor: "#FBF8F1",
+        paddingTop: "5rem",
+        paddingBottom: "5rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem"
       }}
     >
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div
+      <div className="max-w-6xl mx-auto">
+        {/* Section Label */}
+        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
           style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: 999,
-            background: "rgba(22,35,63,0.08)",
-            color: "#16233F",
-            fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: "0.12em",
+            backgroundColor: "rgba(201, 162, 39, 0.12)",
+            color: "#C9A227",
+            fontFamily: "'Inter', sans-serif",
+            fontSize: "14px",
+            fontWeight: "600",
             textTransform: "uppercase",
-            padding: "10px 16px",
-            marginBottom: 16,
-            fontFamily: "Inter, sans-serif",
+            letterSpacing: "0.5px"
           }}
         >
           The 30-Day Curriculum
         </div>
 
-        <h2
+        {/* Section Headline */}
+        <h2 className="mt-6 max-w-3xl text-3xl font-bold leading-tight lg:text-4xl"
           style={{
-            margin: "0 auto 30px",
-            maxWidth: 760,
-            textAlign: "center",
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(2.3rem, 3.5vw, 4rem)",
-            lineHeight: 1.08,
-            color: "#1C2536",
+            fontFamily: "'Fraunces', serif",
+            color: "#0B1020",
+            fontWeight: "700",
+            fontSize: "clamp(1.75rem, 4vw, 3rem)"
           }}
         >
-          Here&apos;s exactly what you&apos;ll build, week by week.
+          HERE'S EXACTLY WHAT YOU'LL BUILD, WEEK BY WEEK.
         </h2>
 
-        <div style={{ display: "grid", gap: 22, marginTop: 30 }}>
-          {weeks.map((week) => (
+        {/* Section Subhead */}
+        <p className="mt-6 max-w-2xl text-lg text-ink"
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            color: "#111a33",
+            fontSize: "18px",
+            lineHeight: "1.8"
+          }}
+        >
+          Every week has a theme, daily training, and a real deliverable you submit. By Day 30, those four deliverables combine into your complete consulting launch package.
+        </p>
+
+        {/* Weeks Grid */}
+        <div className="mt-12 grid md:grid-cols-2 gap-8"
+          style={{
+            marginTop: "3rem",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "2rem"
+          }}
+        >
+          {weeks.map((item, index) => (
             <div
-              key={week.title}
+              key={index}
+              className="bg-white rounded-lg p-8 border border-gray-200"
               style={{
-                background: "#ffffff",
-                borderLeft: "4px solid #C6A24A",
-                borderRadius: 18,
-                padding: "24px 20px 20px",
-                boxShadow: "0 12px 28px rgba(22,35,63,0.06)",
+                backgroundColor: "#FFFFFF",
+                borderRadius: "12px",
+                padding: "2rem",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 4px 12px rgba(11, 16, 32, 0.08)",
+                transition: "all 0.3s ease"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 12px 32px rgba(11, 16, 32, 0.12)";
+                e.currentTarget.style.transform = "translateY(-4px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 4px 12px rgba(11, 16, 32, 0.08)";
+                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              <h3
-                style={{
-                  margin: 0,
-                  color: "#16233F",
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "clamp(1.5rem, 2vw, 2.3rem)",
-                  lineHeight: 1.2,
-                }}
-              >
-                {week.title}
-              </h3>
+              {/* Week Header */}
+              <div style={{ marginBottom: "1.5rem" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "baseline",
+                    gap: "1rem",
+                    marginBottom: "0.5rem"
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: "'Fraunces', serif",
+                      fontSize: "2rem",
+                      fontWeight: "700",
+                      color: "#C9A227",
+                      margin: "0"
+                    }}
+                  >
+                    Week {item.week}
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: "14px",
+                      fontWeight: "600",
+                      color: "#5B6472",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                      margin: "0"
+                    }}
+                  >
+                    {item.days}
+                  </p>
+                </div>
+                <h4
+                  style={{
+                    fontFamily: "'Fraunces', serif",
+                    fontSize: "1.375rem",
+                    fontWeight: "700",
+                    color: "#0B1020",
+                    marginTop: "0.5rem",
+                    marginBottom: "0"
+                  }}
+                >
+                  {item.title}
+                </h4>
+              </div>
 
-              <p
-                style={{
-                  margin: "12px 0 10px",
-                  color: "#5B6472",
-                  fontFamily: "Inter, sans-serif",
-                  fontSize: 16,
-                }}
-              >
-                {week.summary}
-              </p>
+              {/* Topics List */}
+              <div style={{ marginBottom: "1.5rem" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: "0",
+                    margin: "0",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.75rem"
+                  }}
+                >
+                  {item.topics.map((topic, topicIndex) => (
+                    <li
+                      key={topicIndex}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "0.75rem"
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          borderRadius: "50%",
+                          backgroundColor: "#C9A227",
+                          marginTop: "0.6rem",
+                          flexShrink: 0
+                        }}
+                      ></span>
+                      <span
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          fontSize: "15px",
+                          lineHeight: "1.6",
+                          color: "#374151"
+                        }}
+                      >
+                        {topic}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <p
+              {/* Deliverable */}
+              <div
                 style={{
-                  margin: "0 0 14px",
-                  color: "#374151",
-                  fontFamily: "Inter, sans-serif",
-                  fontSize: 18,
-                  lineHeight: 1.7,
+                  borderTop: "1px solid #E5E7EB",
+                  paddingTop: "1.5rem",
+                  marginTop: "1.5rem"
                 }}
               >
-                {week.body}
-              </p>
-
-              <ul
-                style={{
-                  margin: 0,
-                  paddingLeft: 20,
-                  color: "#374151",
-                  fontFamily: "Inter, sans-serif",
-                  fontSize: 17,
-                  lineHeight: 1.8,
-                }}
-              >
-                {week.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
+                <p
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "14px",
+                    fontStyle: "italic",
+                    fontWeight: "600",
+                    color: "#C9A227",
+                    margin: "0",
+                    lineHeight: "1.7"
+                  }}
+                >
+                  <span style={{ fontWeight: "700", fontStyle: "normal" }}>Deliverable:</span> {item.deliverable}
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
+        {/* Closing Message */}
         <div
           style={{
-            background: "#16233F",
-            color: "#ffffff",
-            borderRadius: 18,
-            padding: "28px 22px",
-            marginTop: 28,
-            boxShadow: "0 14px 32px rgba(22,35,63,0.12)",
+            marginTop: "3rem",
+            padding: "2rem",
+            backgroundColor: "#0B1020",
+            borderRadius: "12px",
+            textAlign: "center"
           }}
         >
-          <h3
-            style={{
-              margin: 0,
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(1.8rem, 2.5vw, 2.6rem)",
-              lineHeight: 1.2,
-            }}
-          >
-            Capstone → Graduation: Saturday, October 10
-          </h3>
           <p
             style={{
-              margin: "12px 0 0",
-              color: "rgba(255,255,255,0.82)",
-              fontFamily: "Inter, sans-serif",
-              fontSize: 18,
-              lineHeight: 1.7,
+              fontFamily: "'Fraunces', serif",
+              fontSize: "1.5rem",
+              fontWeight: "700",
+              color: "#E4C767",
+              margin: "0 0 1rem 0"
             }}
           >
-            Live mock discovery calls, direct feedback, and a clear path to a finished consulting offer before you ever pitch a real client.
+            This isn't theory. This is a build.
           </p>
-        </div>
-
-        <div style={{ textAlign: "center", marginTop: 32 }}>
-          <a
-            href="#waitlist-form"
+          <p
             style={{
-              display: "inline-block",
-              minHeight: 56,
-              background: "linear-gradient(135deg, #FF6B57 0%, #ff8a73 100%)",
-              color: "#ffffff",
-              textDecoration: "none",
-              borderRadius: 14,
-              padding: "18px 30px",
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 800,
-              letterSpacing: "0.05em",
-              textTransform: "uppercase",
-              boxShadow: "0 18px 28px rgba(255,107,87,0.22)",
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "16px",
+              lineHeight: "1.7",
+              color: "#D1D5DB",
+              margin: "0"
             }}
           >
-            Join the Free Waitlist — Be First to Build This
-          </a>
+            Four weeks. Four deliverables. One complete consulting launch system ready to land real clients on Day 31.
+          </p>
         </div>
       </div>
     </section>
