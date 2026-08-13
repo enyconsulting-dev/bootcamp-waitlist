@@ -7,8 +7,7 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
-        libpq-dev \  # For psycopg2-binary (provides pg_config)
-        && \
+        libpq-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
