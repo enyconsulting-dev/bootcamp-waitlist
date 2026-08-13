@@ -1,0 +1,11 @@
+# /home/obed/Documents/bootcamp-waitlist/backend/.gitignore
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.DS_Store
+.env
+INSTRUCTIONS_FOR_AI_AGENT.md
