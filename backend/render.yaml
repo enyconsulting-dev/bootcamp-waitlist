@@ -1,0 +1,20 @@
+# /home/obed/Documents/bootcamp-waitlist/backend/render.yaml
+# Render Blueprint — using Docker runtime deliberately, since prior FastAPI
+# deploys on Render hit Python-version-pinning conflicts with the native runtime.
+# Docker sidesteps that entirely: the version is pinned in the Dockerfile, not Render's UI.
+services:
+  - type: web
+    name: bootcamp-waitlist-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        sync: false  # set manually in Render dashboard — do not commit real value
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: ADMIN_API_KEY
+        sync: false
