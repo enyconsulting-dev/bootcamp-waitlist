@@ -3,6 +3,13 @@ FROM python:3.14-slim
 
 WORKDIR /app
 
+# Set up writable directories for Cargo/Rustop to avoid read-only file system issues
+ENV CARGO_HOME=/tmp/cargo-home
+ENV RUSTUP_HOME=/tmp/rustup-home
+ENV HOME=/tmp/home
+RUN mkdir -p /tmp/cargo-home /tmp/rustup-home /tmp/home && \
+    chmod -R 777 /tmp/cargo-home /tmp/rustup-home /tmp/home
+
 # Install system dependencies for building Python packages including psycopg2-binary
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -16,7 +23,7 @@ ENV PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir --only-binary :all: -r requirements.txt
 
 COPY app ./app
 
