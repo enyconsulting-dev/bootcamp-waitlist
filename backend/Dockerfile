@@ -10,6 +10,9 @@ RUN apt-get update && \
         libpq-dev && \
     rm -rf /var/lib/apt/lists/*
 
+# Set environment variable to allow PyO3 to work with newer Python versions
+ENV PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
+
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
