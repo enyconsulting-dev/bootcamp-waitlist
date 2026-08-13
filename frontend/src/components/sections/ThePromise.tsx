@@ -2,9 +2,9 @@
 
 export default function ThePromise() {
   return (
-    <section className="bg-navy text-white py-20 px-6"
+    <section className="bg-ink text-white py-20 px-6"
       style={{
-        backgroundColor: "#16233F",
+        backgroundColor: "#0B1020",
         paddingTop: "5rem",
         paddingBottom: "5rem",
         paddingLeft: "1.5rem",
@@ -13,10 +13,10 @@ export default function ThePromise() {
     >
       <div className="max-w-4xl mx-auto text-center">
         {/* Section Label */}
-        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gold/20 mb-6"
+        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
           style={{
-            backgroundColor: "#FF6B5733", /* gold with 20% opacity */
-            color: "#FF6B57",
+            backgroundColor: "rgba(201, 162, 39, 0.15)",
+            color: "#E4C767",
             fontFamily: "'Inter', sans-serif",
             fontSize: "14px",
             fontWeight: "600",
@@ -28,23 +28,24 @@ export default function ThePromise() {
         </div>
 
         {/* Section Headline */}
-        <h2 className="mt-4 max-w-xl text-3xl font-bold leading-tight lg:text-4xl"
+        <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight lg:text-4xl mx-auto"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Fraunces', serif",
             color: "#FFFFFF",
-            fontWeight: "bold"
+            fontWeight: "700",
+            fontSize: "clamp(1.75rem, 4vw, 3rem)"
           }}
         >
           IN 30 DAYS, YOU WILL HAVE A CONSULTING OFFER THAT CAN LAND REAL CLIENTS.
         </h2>
 
         {/* Section Subhead */}
-        <p className="mt-4 max-w-xl text-lg text-gray-300"
+        <p className="mt-6 max-w-2xl text-lg mx-auto"
           style={{
             fontFamily: "'Inter', sans-serif",
-            color: "#A0AEC0",
+            color: "#D1D5DB",
             fontSize: "18px",
-            lineHeight: "1.7"
+            lineHeight: "1.8"
           }}
         >
           Not a vague idea. Not a mood board. Not a LinkedIn bio refresh.<br />
@@ -52,10 +53,10 @@ export default function ThePromise() {
         </p>
 
         {/* Graduation Day Info */}
-        <p className="mt-6 text-base text-gray-300"
+        <p className="mt-8 text-base"
           style={{
             fontFamily: "'Inter', sans-serif",
-            color: "#A0AEC0",
+            color: "#D1D5DB",
             fontSize: "16px"
           }}
           >
@@ -63,181 +64,236 @@ export default function ThePromise() {
         </p>
 
         {/* Checklist */}
-        <div className="mt-10 space-y-4 max-w-xl mx-auto text-left pl-8">
+        <div className="mt-10 space-y-4 max-w-2xl mx-auto text-left pl-8">
           <div className="flex items-start">
-            <div className="flex-shrink-0 w-4 h-4 bg-gold-cta rounded-full mt-0.5 flex items-center justify-center"
+            <div className="flex-shrink-0 w-5 h-5 rounded-full mt-0.5 flex items-center justify-center flex-shrink-0"
               style={{
-                backgroundColor: "#FF6B57",
-                width: "16px",
-                height: "16px",
+                backgroundColor: "#C9A227",
+                width: "20px",
+                height: "20px",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
               }}
             >
-              <span className="text-xs text-white font-bold"
-                style={{ fontSize: "10px" }}
-              >  ✓</span>
+              <span className="text-xs text-ink font-bold"
+                style={{ fontSize: "12px", color: "#0B1020" }}
+              >✓</span>
             </div>
-            <div className="ml-3 text-gray-200"
+            <div className="ml-4 text-gray-100"
               style={{
                 fontFamily: "'Inter', sans-serif",
-                color: "#E2E8F0",
+                color: "#F3F4F6",
                 fontSize: "16px",
-                lineHeight: "1.7"
+                lineHeight: "1.8"
               }}
             >
               A consulting offer with a price you're confident saying out loud
             </div>
           </div>
           <div className="flex items-start">
-            <div className="flex-shrink-0 w-4 h-4 bg-gold-cta rounded-full mt-0.5 flex items-center justify-center"
+            <div className="flex-shrink-0 w-5 h-5 rounded-full mt-0.5 flex items-center justify-center flex-shrink-0"
               style={{
-                backgroundColor: "#FF6B57",
-                width: "16px",
-                height: "16px",
+                backgroundColor: "#C9A227",
+                width: "20px",
+                height: "20px",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
               }}
             >
-              <span className="text-xs text-white font-bold"
-                style={{ fontSize: "10px" }}
-              >  ✓</span>
+              <span className="text-xs text-ink font-bold"
+                style={{ fontSize: "12px", color: "#0B1020" }}
+              >✓</span>
             </div>
-            <div className="ml-3 text-gray-200"
+            <div className="ml-4 text-gray-100"
               style={{
                 fontFamily: "'Inter', sans-serif",
-                color: "#E2E8F0",
+                color: "#F3F4F6",
                 fontSize: "16px",
-                lineHeight: "1.7"
+                lineHeight: "1.8"
               }}
             >
               A LinkedIn presence that positions you as the expert — not just another employee
             </div>
           </div>
           <div className="flex items-start">
-            <div className="flex-shrink-0 w-4 h-4 bg-gold-cta rounded-full mt-0.5 flex items-center justify-center"
+            <div className="flex-shrink-0 w-5 h-5 rounded-full mt-0.5 flex items-center justify-center flex-shrink-0"
               style={{
-                backgroundColor: "#FF6B57",
-                width: "16px",
-                height: "16px",
+                backgroundColor: "#C9A227",
+                width: "20px",
+                height: "20px",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
               }}
             >
-              <span className="text-xs text-white font-bold"
-                style={{ fontSize: "10px" }}
-              >  ✓</span>
+              <span className="text-xs text-ink font-bold"
+                style={{ fontSize: "12px", color: "#0B1020" }}
+              >✓</span>
             </div>
-            <div className="ml-3 text-gray-200"
+            <div className="ml-4 text-gray-100"
               style={{
                 fontFamily: "'Inter', sans-serif",
-                color: "#E2E8F0",
+                color: "#F3F4F6",
                 fontSize: "16px",
-                lineHeight: "1.7"
+                lineHeight: "1.8"
               }}
             >
               A target list of decision-makers and a proven outreach sequence to reach them
             </div>
           </div>
           <div className="flex items-start">
-            <div className="flex-shrink-0 w-4 h-4 bg-gold-cta rounded-full mt-0.5 flex items-center justify-center"
+            <div className="flex-shrink-0 w-5 h-5 rounded-full mt-0.5 flex items-center justify-center flex-shrink-0"
               style={{
-                backgroundColor: "#FF6B57",
-                width: "16px",
-                height: "16px",
+                backgroundColor: "#C9A227",
+                width: "20px",
+                height: "20px",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
               }}
             >
-              <span className="text-xs text-white font-bold"
-                style={{ fontSize: "10px" }}
-              >  ✓</span>
+              <span className="text-xs text-ink font-bold"
+                style={{ fontSize: "12px", color: "#0B1020" }}
+              >✓</span>
             </div>
-            <div className="ml-3 text-gray-200"
+            <div className="ml-4 text-gray-100"
               style={{
                 fontFamily: "'Inter', sans-serif",
-                color: "#E2E8F0",
+                color: "#F3F4F6",
                 fontSize: "16px",
-                lineHeight: "1.7"
+                lineHeight: "1.8"
               }}
             >
               A discovery call framework so you can walk into any sales conversation and own the room
             </div>
           </div>
           <div className="flex items-start">
-            <div className="flex-shrink-0 w-4 h-4 bg-gold-cta rounded-full mt-0.5 flex items-center justify-center"
+            <div className="flex-shrink-0 w-5 h-5 rounded-full mt-0.5 flex items-center justify-center flex-shrink-0"
               style={{
-                backgroundColor: "#FF6B57",
-                width: "16px",
-                height: "16px",
+                backgroundColor: "#C9A227",
+                width: "20px",
+                height: "20px",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
               }}
             >
-              <span className="text-xs text-white font-bold"
-                style={{ fontSize: "10px" }}
-              >  ✓</span>
+              <span className="text-xs text-ink font-bold"
+                style={{ fontSize: "12px", color: "#0B1020" }}
+              >✓</span>
             </div>
-            <div className="ml-3 text-gray-200"
+            <div className="ml-4 text-gray-100"
               style={{
                 fontFamily: "'Inter', sans-serif",
-                color: "#E2E8F0",
+                color: "#F3F4F6",
                 fontSize: "16px",
-                lineHeight: "1.7"
+                lineHeight: "1.8"
               }}
             >
               A proposal ready to send the day after a call
             </div>
           </div>
+          <div className="flex items-start">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full mt-0.5 flex items-center justify-center flex-shrink-0"
+              style={{
+                backgroundColor: "#C9A227",
+                width: "20px",
+                height: "20px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <span className="text-xs text-ink font-bold"
+                style={{ fontSize: "12px", color: "#0B1020" }}
+              >✓</span>
+            </div>
+            <div className="ml-4 text-gray-100"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                color: "#F3F4F6",
+                fontSize: "16px",
+                lineHeight: "1.8"
+              }}
+            >
+              A live mock discovery call — done in front of your cohort, with direct feedback, before you ever pitch a real client
+            </div>
+          </div>
         </div>
 
         {/* Closing Text */}
-        <p className="mt-12 text-base text-gold-400 italic max-w-xl mx-auto"
+        <p className="mt-12 text-lg italic max-w-2xl mx-auto"
           style={{
-            fontFamily: "'Playfair Display', serif",
-            color: "#FF6B57",
+            fontFamily: "'Fraunces', serif",
+            color: "#E4C767",
             fontStyle: "italic",
-            fontSize: "18px"
+            fontSize: "20px",
+            fontWeight: "600"
           }}
         >
           This isn't theory. This is a build.
         </p>
 
-        {/* Inline CTA */}
-        <a href="#waitlist-form"
-          className="mt-8 inline-block bg-gold-cta hover:bg-gold-cta-dark text-white font-medium py-4 px-8 rounded-lg transition-colors disabled:opacity-50"
+        <p className="mt-6 text-base"
           style={{
-            backgroundColor: "#FF6B57",
-            color: "#FFFFFF",
             fontFamily: "'Inter', sans-serif",
-            fontWeight: "600",
-            fontSize: "18px",
-            padding: "16px 32px",
-            borderRadius: "6px",
-            textDecoration: "none",
-            display: "inline-block",
-            minHeight: "56px",
-            lineHeight: "1.4"
+            color: "#D1D5DB",
+            fontSize: "16px"
           }}
         >
-          Join the Free Waitlist Now
-        </a>
+          And the waitlist is how you get in first — at the lowest price it will ever be offered.
+        </p>
 
-        <p className="mt-4 text-sm text-gray-300 italic"
+        {/* Inline CTA */}
+        <div style={{ marginTop: "2rem" }}>
+          <a href="#waitlist-form"
+            className="inline-block text-ink font-medium transition-all"
+            style={{
+              backgroundColor: "#C9A227",
+              color: "#0B1020",
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: "600",
+              fontSize: "16px",
+              padding: "16px 40px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              display: "inline-block",
+              minHeight: "56px",
+              lineHeight: "1.4",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 10px 40px -10px rgba(201,162,39,0.45)",
+              transition: "all 0.2s ease-in-out"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#E4C767";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 15px 50px -10px rgba(201,162,39,0.55)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "#C9A227";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 10px 40px -10px rgba(201,162,39,0.45)";
+            }}
+          >
+            Join the Free Waitlist Now
+          </a>
+        </div>
+
+        <p className="mt-4 text-sm italic"
           style={{
             fontFamily: "'Inter', sans-serif",
-            color: "#5B6472",
-            fontStyle: "italic"
+            color: "#D1D5DB",
+            fontStyle: "italic",
+            opacity: 0.85
           }}
         >
           Waitlist members get 48-hour early-bird access on September 1st.

@@ -1,17 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap");
 
 :root {
-  --navy: #16233f;
-  --navy-deep: #101b2d;
-  --gold: #c6a24a;
-  --gold-soft: #efe0af;
-  --terracotta: #ff6b57;
-  --mist: #f7f8fa;
-  --ink: #1c2536;
+  /* New Brand Palette */
+  --ink-default: #0B1020;
+  --ink-800: #111a33;
+  --ink-700: #1a2445;
+  --cream: #FBF8F1;
+  --gold-default: #C9A227;
+  --gold-light: #E4C767;
+  --gold-dark: #9C7C1A;
+  
+  /* Legacy (kept for compatibility) */
+  --navy: #0B1020;
+  --navy-deep: #0B1020;
+  --gold: #C9A227;
+  --gold-soft: #E4C767;
+  --terracotta: #C9A227;
+  --mist: #FBF8F1;
+  --ink: #0B1020;
   --gray: #5b6472;
   --white: #ffffff;
   --panel: #ffffff;
-  --shadow: 0 20px 45px rgba(22, 35, 63, 0.12);
+  --shadow: 0 20px 60px -20px rgba(11, 16, 32, 0.35);
 }
 
 html {
