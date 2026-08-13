@@ -63,7 +63,7 @@ export default function Testimonials() {
             >
               <span className="text-2xl"
                 style={{ color: "#FF6B57" }}
-              >����_frame</span>
+              >    _frame</span>
             </div>
             <div className="p-6">
               <blockquote className="mb-4 italic"
@@ -121,7 +121,7 @@ export default function Testimonials() {
             >
               <span className="text-2xl"
                 style={{ color: "#FF6B57" }}
-              >����_frame</span>
+              >    _frame</span>
             </div>
             <div className="p-6">
               <blockquote className="mb-4 italic"
@@ -179,7 +179,7 @@ export default function Testimonials() {
             >
               <span className="text-2xl"
                 style={{ color: "#FF6B57" }}
-              >����_frame</span>
+              >    _frame</span>
             </div>
             <div className="p-6">
               <blockquote className="mb-4 italic"
@@ -230,9 +230,9 @@ export default function Testimonials() {
         >
           <span>100,000+ Professionals Trained</span>
           <span>|</span>
-          <span>���������🌍 90+ Countries</span>
+          <span>         🌍 90+ Countries</span>
           <span>|</span>
-          <span>���������🏆 95% Land a Client Within 90 Days</span>
+          <span>         🏆 95% Land a Client Within 90 Days</span>
         </div>
 
         {/* Inline CTA */}

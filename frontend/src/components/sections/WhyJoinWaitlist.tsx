@@ -137,7 +137,7 @@ export default function WhyJoinWaitlist() {
                   lineHeight: "1.7"
                 }}
               >
-                The early-bird price — $47 USD / ��� ��� ��� ��� ��� ��� ��� ��� ��� ��� ���� ���� ���� � � � � � � � � � � �� �� �� 26,875 NGN — is exclusively for waitlist members, and it's only available for 48 hours. After September 3rd, the price goes to $97 USD / ��� ���� ���� ���� ���� ���� ��� ���� ��� ���� ���� ���� ���� � �� �� �� �� �� � �� � �� �� �� �� 37,625 NGN and stays there. Joining the waitlist today is the only way to lock in this price.
+                The early-bird price — $47 USD /                                                                                     26,875 NGN — is exclusively for waitlist members, and it's only available for 48 hours. After September 3rd, the price goes to $97 USD /                                                                                                   37,625 NGN and stays there. Joining the waitlist today is the only way to lock in this price.
               </p>
             </div>
           </div>
@@ -251,7 +251,7 @@ export default function WhyJoinWaitlist() {
               textAlign: "center"
             }}
           >
-            In short: joining the waitlist today is free, and it saves you up to $50 / ��� ���� ���� ���� ���� ��� ��� ���� ��� ���� ���� � �� �� �� �� � � �� � �� �� 10,000 when doors open September 1st.
+            In short: joining the waitlist today is free, and it saves you up to $50 /                                                                                 10,000 when doors open September 1st.
           </p>
 
           <p className="mt-2 text-base text-navy text-center"

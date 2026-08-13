@@ -76,7 +76,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_clock</span>
+                >  _clock</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"
@@ -127,7 +127,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_users</span>
+                >  _users</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"
@@ -178,7 +178,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_play</span>
+                >  _play</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"
@@ -229,7 +229,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_clipboard</span>
+                >  _clipboard</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"
@@ -280,7 +280,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_group</span>
+                >  _group</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"
@@ -331,7 +331,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_robot</span>
+                >  _robot</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"
@@ -382,7 +382,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_microphone</span>
+                >  _microphone</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"
@@ -433,7 +433,7 @@ export default function WhatYouGet() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FF6B57" }}
-                >��_graduation-cap</span>
+                >  _graduation-cap</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-bold text-navy mb-2"

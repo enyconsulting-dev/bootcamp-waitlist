@@ -78,7 +78,7 @@ export default function ThePromise() {
             >
               <span className="text-xs text-white font-bold"
                 style={{ fontSize: "10px" }}
-              >��✓</span>
+              >  ✓</span>
             </div>
             <div className="ml-3 text-gray-200"
               style={{
@@ -105,7 +105,7 @@ export default function ThePromise() {
             >
               <span className="text-xs text-white font-bold"
                 style={{ fontSize: "10px" }}
-              >��✓</span>
+              >  ✓</span>
             </div>
             <div className="ml-3 text-gray-200"
               style={{
@@ -132,7 +132,7 @@ export default function ThePromise() {
             >
               <span className="text-xs text-white font-bold"
                 style={{ fontSize: "10px" }}
-              >��✓</span>
+              >  ✓</span>
             </div>
             <div className="ml-3 text-gray-200"
               style={{
@@ -159,7 +159,7 @@ export default function ThePromise() {
             >
               <span className="text-xs text-white font-bold"
                 style={{ fontSize: "10px" }}
-              >��✓</span>
+              >  ✓</span>
             </div>
             <div className="ml-3 text-gray-200"
               style={{
@@ -186,7 +186,7 @@ export default function ThePromise() {
             >
               <span className="text-xs text-white font-bold"
                 style={{ fontSize: "10px" }}
-              >��✓</span>
+              >  ✓</span>
             </div>
             <div className="ml-3 text-gray-200"
               style={{

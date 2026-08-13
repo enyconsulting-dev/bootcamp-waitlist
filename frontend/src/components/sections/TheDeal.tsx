@@ -60,7 +60,7 @@ export default function TheDeal() {
               lineHeight: "1.7"
             }}
           >
-            When enrollment opens on September 1st, the regular price is $97 USD for international students and � ₦37,625 NGN for students in Nigeria.
+            When enrollment opens on September 1st, the regular price is $97 USD for international students and   ₦37,625 NGN for students in Nigeria.
           </p>
 
           <p className="text-lg text-gray-700"
@@ -129,7 +129,7 @@ export default function TheDeal() {
                 fontSize: "18px"
               }}
             >
-              �� 🌍 INTERNATIONAL (USD)
+                 🌍 INTERNATIONAL (USD)
             </h3>
 
             <div className="space-y-4">
@@ -282,7 +282,7 @@ export default function TheDeal() {
                 fontSize: "18px"
               }}
             >
-              �� 🇳���🇬 NIGERIA (NGN)
+                 🇳   🇬 NIGERIA (NGN)
             </h3>
 
             <div className="space-y-4">
@@ -295,7 +295,7 @@ export default function TheDeal() {
                     fontSize: "24px"
                   }}
                 >
-                  � ₦26,875
+                    ₦26,875
                 </span>
                 <span className="text-sm font-medium text-gray-600"
                   style={{
@@ -318,7 +318,7 @@ export default function TheDeal() {
                     fontSize: "24px"
                   }}
                 >
-                  � ₦37,625
+                    ₦37,625
                 </span>
                 <span className="text-sm font-medium text-gray-600"
                   style={{
@@ -397,7 +397,7 @@ export default function TheDeal() {
                     fontSize: "16px"
                   }}
                 >
-                  Save � ₦10,750 (29% off)
+                  Save   ₦10,750 (29% off)
                 </p>
               </div>
 
@@ -470,7 +470,7 @@ export default function TheDeal() {
               fontStyle: "italic"
             }}
           >
-            Free today. $47 USD / ���� ��� ��� � �� � � ₦ 26,875 NGN when doors open Sept 1.
+            Free today. $47 USD /                       ₦ 26,875 NGN when doors open Sept 1.
           </p>
         </div>
       </div>

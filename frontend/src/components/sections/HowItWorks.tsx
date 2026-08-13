@@ -86,7 +86,7 @@ export default function HowItWorks() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FFFFFF" }}
-                >��������������</span>
+                >              </span>
               </div>
               <div className="text-lg font-bold"
                 style={{
@@ -134,7 +134,7 @@ export default function HowItWorks() {
                     color: "#FF6B57",
                     fontWeight: "bold"
                   }}
-                >��������������</span>
+                >              </span>
               </div>
               <div className="text-lg font-bold"
                 style={{
@@ -155,7 +155,7 @@ export default function HowItWorks() {
                 }}
               >
                 Doors Open (Waitlist Members Only — First 48 Hours)<br/>
-                Enrollment opens. Waitlist members get the exclusive early-bird price: $47 USD / ��� � � ₦ 26,875 NGN. The public doesn't see this price. This is your window.
+                Enrollment opens. Waitlist members get the exclusive early-bird price: $47 USD /         ₦ 26,875 NGN. The public doesn't see this price. This is your window.
               </div>
             </div>
 
@@ -180,7 +180,7 @@ export default function HowItWorks() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FFFFFF" }}
-                >��������������</span>
+                >              </span>
               </div>
               <div className="text-lg font-bold"
                 style={{
@@ -201,7 +201,7 @@ export default function HowItWorks() {
                 }}
               >
                 Early-Bird Closes<br/>
-                The early-bird price ends at midnight. After this, enrollment moves to the regular price: $97 USD / ��� � � ₦37,625 NGN. Waitlist members who acted in the 48-hour window saved 50%.
+                The early-bird price ends at midnight. After this, enrollment moves to the regular price: $97 USD /         ₦37,625 NGN. Waitlist members who acted in the 48-hour window saved 50%.
               </div>
             </div>
 
@@ -226,7 +226,7 @@ export default function HowItWorks() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FFFFFF" }}
-                >��������������</span>
+                >              </span>
               </div>
               <div className="text-lg font-bold"
                 style={{
@@ -272,7 +272,7 @@ export default function HowItWorks() {
               >
                 <span className="text-2xl"
                   style={{ color: "#FFFFFF" }}
-                >��������������</span>
+                >              </span>
               </div>
               <div className="text-lg font-bold"
                 style={{
@@ -321,7 +321,7 @@ export default function HowItWorks() {
                     color: "#FF6B57",
                     fontWeight: "bold"
                   }}
-                >��������������</span>
+                >              </span>
               </div>
               <div className="text-lg font-bold"
                 style={{

@@ -88,7 +88,7 @@ export default function Hero() {
           color: "#A0AEC0"
         }}
       >
-        Waitlist members get exclusive 48-hour early-bird access on September 1st — $47 USD / � ₦ 26,875 NGN — before the price goes up and before the public even knows doors are open.
+        Waitlist members get exclusive 48-hour early-bird access on September 1st — $47 USD /   ₦ 26,875 NGN — before the price goes up and before the public even knows doors are open.
       </p>
 
       {/* Countdown Timer */}
@@ -185,9 +185,9 @@ export default function Hero() {
       >
         <span>100,000+ Professionals Trained</span>
         <span>|</span>
-        <span>���🌍 90+ Countries</span>
+        <span>🌍 90+ Countries</span>
         <span>|</span>
-        <span>���🏆 95% Land a Client Within 90 Days</span>
+        <span>🏆 95% Land a Client Within 90 Days</span>
       </div>
 
       {/* Pull Quote */}

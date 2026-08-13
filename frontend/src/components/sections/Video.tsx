@@ -71,7 +71,7 @@ export default function Video() {
               <div className="text-6xl mb-4"
                 style={{ color: "#C6A24A" }}
               >
-                � ▶��️
+                  ▶  ️
               </div>
               <p className="text-lg font-medium text-gray-600"
                 style={{
