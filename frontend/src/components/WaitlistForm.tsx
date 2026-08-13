@@ -46,84 +46,104 @@ export default function WaitlistForm() {
 
   if (submitState === "success") {
     return (
-      <div role="status">
-        <h2>You're on the waitlist.</h2>
+      <div className="success-box" role="status">
+        <h2>You’re on the waitlist.</h2>
         <p>Check your email and WhatsApp on September 1st for your early-bird enrollment link.</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="first_name">First Name</label>
-        <input
-          id="first_name"
-          type="text"
-          required
-          value={formData.first_name}
-          onChange={(e) => handleChange("first_name", e.target.value)}
-        />
+    <form className="waitlist-form" onSubmit={handleSubmit}>
+      <div className="form-grid">
+        <div className="field">
+          <label htmlFor="first_name">First Name</label>
+          <input
+            id="first_name"
+            type="text"
+            required
+            value={formData.first_name}
+            onChange={(e) => handleChange("first_name", e.target.value)}
+            placeholder="First name"
+          />
+        </div>
+
+        <div className="field">
+          <label htmlFor="last_name">Last Name</label>
+          <input
+            id="last_name"
+            type="text"
+            required
+            value={formData.last_name}
+            onChange={(e) => handleChange("last_name", e.target.value)}
+            placeholder="Last name"
+          />
+        </div>
+
+        <div className="field full">
+          <label htmlFor="email">Email Address</label>
+          <input
+            id="email"
+            type="email"
+            required
+            value={formData.email}
+            onChange={(e) => handleChange("email", e.target.value)}
+            placeholder="you@example.com"
+          />
+          <p className="field-hint">This is where your enrollment link will be sent.</p>
+        </div>
+
+        <div className="field full">
+          <label htmlFor="country">Country</label>
+          <select
+            id="country"
+            required
+            value={formData.country}
+            onChange={(e) => handleChange("country", e.target.value)}
+          >
+            <option value="">Select your country</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Kenya">Kenya</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Other">Other</option>
+          </select>
+          <p className="field-hint">We use this to send you the right enrollment link and pricing when doors open.</p>
+        </div>
+
+        <div className="field full">
+          <label htmlFor="whatsapp_number">WhatsApp Number</label>
+          <input
+            id="whatsapp_number"
+            type="tel"
+            required
+            placeholder="+234..."
+            value={formData.whatsapp_number}
+            onChange={(e) => handleChange("whatsapp_number", e.target.value)}
+          />
+          <p className="field-hint">We’ll send your early-bird reminder here on September 1st. No spam — ever.</p>
+        </div>
       </div>
 
-      <div>
-        <label htmlFor="last_name">Last Name</label>
-        <input
-          id="last_name"
-          type="text"
-          required
-          value={formData.last_name}
-          onChange={(e) => handleChange("last_name", e.target.value)}
-        />
-      </div>
+      {submitState === "duplicate" && (
+        <p className="form-status duplicate" role="alert">
+          This email is already on the waitlist.
+        </p>
+      )}
+      {submitState === "error" && (
+        <p className="form-status error" role="alert">
+          {errorMessage}
+        </p>
+      )}
 
-      <div>
-        <label htmlFor="email">Email Address</label>
-        <input
-          id="email"
-          type="email"
-          required
-          value={formData.email}
-          onChange={(e) => handleChange("email", e.target.value)}
-        />
-        <p>This is where your enrollment link will be sent.</p>
-      </div>
-
-      <div>
-        <label htmlFor="country">Country</label>
-        {/* TODO(Phase 5): replace with a full country dropdown component,
-            Nigeria pre-selected / auto-detected per the design spec. */}
-        <input
-          id="country"
-          type="text"
-          required
-          placeholder="e.g. Nigeria"
-          value={formData.country}
-          onChange={(e) => handleChange("country", e.target.value)}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="whatsapp_number">WhatsApp Number (include country code)</label>
-        <input
-          id="whatsapp_number"
-          type="tel"
-          required
-          placeholder="+234..."
-          value={formData.whatsapp_number}
-          onChange={(e) => handleChange("whatsapp_number", e.target.value)}
-        />
-        <p>We'll send your early-bird reminder here on September 1st. No spam — ever.</p>
-      </div>
-
-      {submitState === "duplicate" && <p role="alert">This email is already on the waitlist.</p>}
-      {submitState === "error" && <p role="alert">{errorMessage}</p>}
-
-      <button type="submit" disabled={submitState === "submitting"}>
+      <button className="primary-button" type="submit" disabled={submitState === "submitting"}>
         {submitState === "submitting" ? "Joining..." : "Join the Waitlist — It's Free"}
       </button>
 
-      <p>
+      <p className="form-legal">
         Your information is safe. We will never sell, share, or spam your details. By joining the
         waitlist, you agree to receive emails and WhatsApp messages about the 30-Day Consulting
         Offer Bootcamp from ENY Consulting Inc. / Business Analysis School.

@@ -173,7 +173,7 @@ export default function WhatYouGet() {
                   borderRadius: "8px",
                   display: "flex",
                   alignItems: "center",
-                  justifyCenter: "center"
+                  justifyContent: "center"
                 }}
               >
                 <span className="text-2xl"
@@ -224,7 +224,7 @@ export default function WhatYouGet() {
                   borderRadius: "8px",
                   display: "flex",
                   alignItems: "center",
-                  justifyCenter: "center"
+                  justifyContent: "center"
                 }}
               >
                 <span className="text-2xl"
@@ -275,7 +275,7 @@ export default function WhatYouGet() {
                   borderRadius: "8px",
                   display: "flex",
                   alignItems: "center",
-                  justifyCenter: "center"
+                  justifyContent: "center"
                 }}
               >
                 <span className="text-2xl"
@@ -326,7 +326,7 @@ export default function WhatYouGet() {
                   borderRadius: "8px",
                   display: "flex",
                   alignItems: "center",
-                  justifyCenter: "center"
+                  justifyContent: "center"
                 }}
               >
                 <span className="text-2xl"
@@ -377,7 +377,7 @@ export default function WhatYouGet() {
                   borderRadius: "8px",
                   display: "flex",
                   alignItems: "center",
-                  justifyCenter: "center"
+                  justifyContent: "center"
                 }}
               >
                 <span className="text-2xl"
@@ -428,7 +428,7 @@ export default function WhatYouGet() {
                   borderRadius: "8px",
                   display: "flex",
                   alignItems: "center",
-                  justifyCenter: "center"
+                  justifyContent: "center"
                 }}
               >
                 <span className="text-2xl"
