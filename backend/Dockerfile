@@ -3,19 +3,12 @@ FROM python:3.14-slim
 
 WORKDIR /app
 
-# Install system dependencies and set up Rust environment BEFORE installing Python packages
-ENV CARGO_HOME=/tmp/cargo-home
-ENV RUSTUP_HOME=/tmp/rustup-home
-ENV HOME=/tmp/home
-RUN mkdir -p /tmp/cargo-home /tmp/rustup-home /tmp/home && \
-    chmod -R 777 /tmp/cargo-home /tmp/rustup-home /tmp/home && \
-    apt-get update && \
+# Install system dependencies for building Python packages including psycopg2-binary
+RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
-        rustc \
-        cargo \
-        libssl-dev \
-        pkg-config && \
+        libpq-dev \  # For psycopg2-binary (provides pg_config)
+        && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
