@@ -1,7 +1,11 @@
 # /home/obed/Documents/bootcamp-waitlist/backend/Dockerfile
-FROM python:3.12-slim
+FROM python:3.14-slim
 
 WORKDIR /app
+
+# Set environment variable for Cargo to use a writable directory (just in case)
+ENV CARGO_HOME=/tmp/cargo-home
+RUN mkdir -p $CARGO_HOME && chmod 777 $CARGO_HOME
 
 # System deps for asyncpg build (usually not needed as wheels exist, but safe to keep minimal)
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -9,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --only-binary :all: -r requirements.txt
 
 COPY app ./app
 
