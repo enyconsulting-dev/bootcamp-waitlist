@@ -12,6 +12,8 @@ export interface PricingInfo {
   paymentUrl: string;
 }
 
+
+// Geo - pricing information for different regions
 const PRICES = {
   NGN: {
     amount: 26875,
