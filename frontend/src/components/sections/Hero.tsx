@@ -1,7 +1,9 @@
 // /home/obed/Documents/bootcamp-waitlist/frontend/src/components/sections/Hero.tsx
 // PHASE 5A: Premium Hero with Enhanced Countdown & Trust Signals
+// PHASE 6: Dynamic Geo-location Based Pricing
 
 import { useEffect, useState } from "react";
+import { getUserRegion, getPricingInfo, type PricingRegion } from "../../utils/geoLocation";
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -10,6 +12,8 @@ export default function Hero() {
     minutes: 0,
     seconds: 0,
   });
+  const [region, setRegion] = useState<PricingRegion>("USD");
+  const pricing = getPricingInfo(region);
 
   useEffect(() => {
     const targetDate = new Date("September 1, 2026 00:00:00 WAT"); // WAT = UTC+1
@@ -34,6 +38,11 @@ export default function Hero() {
     updateTimer();
     const interval = setInterval(updateTimer, 1000);
     return () => clearInterval(interval);
+  }, []);
+
+  // Detect user's region for pricing
+  useEffect(() => {
+    getUserRegion().then(setRegion).catch(() => setRegion("USD"));
   }, []);
 
   return (
@@ -149,7 +158,7 @@ export default function Hero() {
             fontWeight: "700",
             color: "#E4C767"
           }}>
-            $47 USD / ₦26,875 NGN
+            {pricing.currencySymbol}{pricing.amount.toLocaleString()} {pricing.currency}
           </p>
           <p style={{
             margin: "0.75rem 0 0 0",
@@ -157,7 +166,7 @@ export default function Hero() {
             fontSize: "13px",
             color: "#D1D5DB"
           }}>
-            48-hour exclusive access when doors open • Price goes to $97 after that
+            48-hour exclusive access when doors open • Price increases after that
           </p>
         </div>
 

@@ -3,6 +3,7 @@ import Video from "./components/sections/Video";
 import AwarenessProblem from "./components/sections/AwarenessProblem";
 import ThePromise from "./components/sections/ThePromise";
 import Curriculum from "./components/sections/Curriculum";
+import CoachBio from "./components/sections/CoachBio";
 import WaitlistForm from "./components/WaitlistForm";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <AwarenessProblem />
       <ThePromise />
       <Curriculum />
+      <CoachBio />
 
       <section className="optin-section" id="waitlist-form">
         <div className="optin-container">
