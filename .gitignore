@@ -6,3 +6,5 @@ frontend.log
 backend/server.log
 build/
 entire_project.md
+CORS_FIX_GUIDE.md
+DEPLOYMENT_CHECKLIST.md
