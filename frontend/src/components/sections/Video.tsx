@@ -80,7 +80,8 @@ export default function Video() {
             justifyContent: "center"
           }}
         >
-          <div
+          <iframe
+            src="https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/preview"
             style={{
               position: "relative",
               width: "100%",
@@ -90,7 +91,8 @@ export default function Video() {
               overflow: "hidden",
               boxShadow: "0 20px 60px -10px rgba(11, 16, 32, 0.25)",
               transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
-              cursor: "pointer"
+              cursor: "pointer",
+              border: "none"
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 30px 80px -10px rgba(11, 16, 32, 0.35)";
@@ -100,76 +102,10 @@ export default function Video() {
               e.currentTarget.style.boxShadow = "0 20px 60px -10px rgba(11, 16, 32, 0.25)";
               e.currentTarget.style.transform = "translateY(0)";
             }}
-          >
-            {/* Video Background Gradient */}
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                background: "linear-gradient(135deg, #1a2445 0%, #0B1020 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                zIndex: 1
-              }}
-            >
-              {/* Play Button Container */}
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "1.5rem"
-                }}
-              >
-                {/* Animated Play Button - Gold */}
-                <div
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    borderRadius: "50%",
-                    backgroundColor: "#C9A227",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    boxShadow: "0 15px 40px rgba(201, 162, 39, 0.4)",
-                    animation: "pulse-glow 2.5s ease-in-out infinite",
-                    transition: "all 0.3s ease"
-                  }}
-                >
-                  <span
-                    style={{
-                      color: "#0B1020",
-                      fontSize: "44px",
-                      marginLeft: "4px",
-                      fontWeight: "bold"
-                    }}
-                  >
-                    ▶
-                  </span>
-                </div>
-
-                {/* Play Text */}
-                <p
-                  style={{
-                    fontFamily: "'Fraunces', serif",
-                    color: "#FFFFFF",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    margin: "0",
-                    maxWidth: "280px"
-                  }}
-                >
-                  Press Play to Unlock Your Consulting Potential
-                </p>
-              </div>
-            </div>
-          </div>
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title="Eno's Message"
+          />
         </div>
 
         {/* CTA Button - Gold */}

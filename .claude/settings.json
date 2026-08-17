@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s /b)",
+      "Read(//tmp/**)",
+      "Read(//c/tmp/**)",
+      "Bash(ls -l /tmp/new_iframe.txt)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(timeout 5 cat C:\\\\Users\\\\Melody\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Melody-Desktop-today-17-bootcamp-waitlist\\\\9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21\\\\tasks\\\\b5x5guf9y.output)",
+      "Bash(npx serve *)",
+      "Bash(timeout 5 cat C:\\\\Users\\\\Melody\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Melody-Desktop-today-17-bootcamp-waitlist\\\\9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21\\\\tasks\\\\b9yho7ggp.output)",
+      "Bash(timeout 5 cat /c/Users/Melody/AppData/Local/Temp/claude\\\\c--Users-Melody-Desktop-today-17-bootcamp-waitlist/9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21/tasks/b9yho7ggp.output)",
+      "Read(//c/Users/Melody/AppData/Local/Temp/claudec--Users-Melody-Desktop-today-17-bootcamp-waitlist/9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21/tasks/**)",
+      "Bash(ls -la \"/c/Users/Melody/AppData/Local/Temp/claude\")",
+      "Read(//c/Users/Melody/AppData/Local/Temp/claude/**)",
+      "Bash(ls -la \"/c/Users/Melody/AppData/Local/Temp/claude/c--Users-Melody-Desktop-today-17-bootcamp-waitlist\")",
+      "Read(//c/Users/Melody/AppData/Local/Temp/claude/c--Users-Melody-Desktop-today-17-bootcamp-waitlist/**)",
+      "Bash(ls -la \"/c/Users/Melody/AppData/Local/Temp/claude/c--Users-Melody-Desktop-today-17-bootcamp-waitlist/9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21\")",
+      "Read(//c/Users/Melody/AppData/Local/Temp/claude/c--Users-Melody-Desktop-today-17-bootcamp-waitlist/9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21/**)",
+      "Bash(ls -la \"/c/Users/Melody/AppData/Local/Temp/claude/c--Users-Melody-Desktop-today-17-bootcamp-waitlist/9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21/tasks\")",
+      "Read(//c/Users/Melody/AppData/Local/Temp/claude/c--Users-Melody-Desktop-today-17-bootcamp-waitlist/9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21/tasks/**)",
+      "Bash(cat \"/c/Users/Melody/AppData/Local/Temp/claude/c--Users-Melody-Desktop-today-17-bootcamp-waitlist/9c9b38ff-e7e9-4a2b-9db6-a9335bf4ae21/tasks/b9yho7ggp.output\")"
+    ]
+  }
+}
