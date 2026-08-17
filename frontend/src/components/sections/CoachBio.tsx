@@ -11,7 +11,7 @@ export default function CoachBio() {
         paddingLeft: "1.5rem",
         paddingRight: "1.5rem"
       }}
-    >
+    > 
       <div style={{ maxWidth: "1000px", marginLeft: "auto", marginRight: "auto" }}>
         {/* Section Label */}
         <div
