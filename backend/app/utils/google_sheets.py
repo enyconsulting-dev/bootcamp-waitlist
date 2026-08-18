@@ -4,7 +4,6 @@ Google Sheets integration for waitlist lead funnel.
 Handles authentication and writing waitlist signups to a Google Sheet.
 """
 import os
-from datetime import datetime
 from typing import Any, Dict
 
 import gspread
@@ -39,6 +38,7 @@ def get_gsheet_client():
 def append_waitlist_to_sheet(signup_data: Dict[str, Any]) -> bool:
     """
     Appends a waitlist signup to the configured Google Sheet.
+    Explicitly finds the next empty row to avoid overwriting issues.
 
     Args:
         signup_data: Dict containing waitlist signup fields
@@ -68,12 +68,29 @@ def append_waitlist_to_sheet(signup_data: Dict[str, Any]) -> bool:
             signup_data.get("whatsapp_number", ""), # E: WhatsApp Number
         ]
 
-        # Append the row (adds to next available row)
-        worksheet.append_row(row, value_input_option="USER_ENTERED")
+        # Find the next empty row by checking column A (First Name)
+        # Start from row 2 (since row 1 is headers)
+        col_a_values = worksheet.col_values(1)  # Get all values in column A
+        next_row = len([v for v in col_a_values if v != ""]) + 1
+
+        # If the sheet is completely empty (no headers even), start at row 1
+        # But we expect headers in row 1, so if row 1 is empty, we still start at row 2
+        if next_row < 2:
+            next_row = 2
+
+        print(f"[GoogleSheets] Found next empty row: {next_row} (based on column A having {len([v for v in col_a_values if v != ''])} non-empty values)")
+
+        # Update the range starting at the next empty row
+        cell_range = f"A{next_row}:E{next_row}"
+        worksheet.update(cell_range, [row], value_input_option="USER_ENTERED")
+        print(f"[GoogleSheets] Updated range {cell_range} with data: {row}")
+
         return True
 
     except Exception as e:
         # In production, you'd want to log this properly
         # Using print for simplicity; consider using logging module in future
         print(f"Error writing to Google Sheets: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return False
