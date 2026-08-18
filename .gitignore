@@ -8,3 +8,8 @@ build/
 entire_project.md
 CORS_FIX_GUIDE.md
 DEPLOYMENT_CHECKLIST.md
+google-credentials.json
+google-credentials-oneline.txt
+
+
+python3 -c 'import json; open("google-credentials-oneline.txt","w").write(json.dumps(json.load(open("google-credentials.json"))))'
