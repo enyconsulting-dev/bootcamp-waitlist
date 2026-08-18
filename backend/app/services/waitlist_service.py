@@ -9,6 +9,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.models import WaitlistSignup
 from app.schemas import WaitlistCreate, WaitlistStats
 from app.utils.country_currency import NGN_AUDIENCE, USD_AUDIENCE, resolve_currency_tag
+from app.utils.google_sheets import append_waitlist_to_sheet
 
 
 class DuplicateEmailError(Exception):
@@ -41,6 +42,25 @@ async def create_signup(db: AsyncSession, payload: WaitlistCreate) -> WaitlistSi
     db.add(signup)
     await db.commit()
     await db.refresh(signup)
+
+    # --- NEW: ALSO WRITE TO GOOGLE SHEETS ---
+    # Convert SQLAlchemy object to dict for sheets integration
+    signup_dict = {
+        "first_name": signup.first_name,
+        "last_name": signup.last_name,
+        "email": signup.email,
+        "country": signup.country,
+        "whatsapp_number": signup.whatsapp_number,
+    }
+
+    # Fire and forget - we don't want signup to fail if sheets is down
+    try:
+        append_waitlist_to_sheet(signup_dict)
+    except Exception as e:
+        # Log error but don't fail the signup request
+        # You could use proper logging here
+        print(f"Warning: Failed to write to Google Sheets: {e}")
+
     return signup
 
 
