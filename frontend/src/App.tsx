@@ -5,6 +5,7 @@ import ThePromise from "./components/sections/ThePromise";
 import Curriculum from "./components/sections/Curriculum";
 import CoachBio from "./components/sections/CoachBio";
 import WaitlistForm from "./components/WaitlistForm";
+import { CountdownTimer } from "./components/CountdownTimer";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         <div className="optin-container">
           <div className="optin-panel">
             <div className="optin-kicker">Doors Open September 1 • Join the Free Waitlist</div>
+            <div className="optin-countdown">
+              <CountdownTimer />
+            </div>
 
             <h2 className="optin-title">Secure your spot before the early-bird window closes.</h2>
 

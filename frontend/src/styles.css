@@ -90,6 +90,29 @@ img {
   font-weight: 700;
 }
 
+.optin-countdown {
+  background: rgba(201, 162, 39, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0B1020;
+  letter-spacing: -0.02em;
+}
+
+.optin-countdown.error {
+  background: rgba(255, 107, 87, 0.08);
+  border-color: rgba(255, 107, 87, 0.2);
+  color: #b34b3a;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 .optin-title {
   margin: 1rem 0 0.5rem;
   font-family: "Fraunces", serif;
