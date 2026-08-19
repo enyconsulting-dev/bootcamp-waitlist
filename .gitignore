@@ -10,6 +10,7 @@ CORS_FIX_GUIDE.md
 DEPLOYMENT_CHECKLIST.md
 google-credentials.json
 google-credentials-oneline.txt
+UI_Modification.md
 
 
 python3 -c 'import json; open("google-credentials-oneline.txt","w").write(json.dumps(json.load(open("google-credentials.json"))))'
