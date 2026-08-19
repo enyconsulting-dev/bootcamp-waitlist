@@ -9,6 +9,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.models import WaitlistSignup
 from app.schemas import WaitlistCreate, WaitlistStats
 from app.utils.country_currency import NGN_AUDIENCE, USD_AUDIENCE, resolve_currency_tag
+from app.utils.ghl import create_waitlist_contact
 from app.utils.google_sheets import append_waitlist_to_sheet
 
 
@@ -51,6 +52,7 @@ async def create_signup(db: AsyncSession, payload: WaitlistCreate) -> WaitlistSi
         "email": signup.email,
         "country": signup.country,
         "whatsapp_number": signup.whatsapp_number,
+        "currency_tag": signup.currency_tag,
     }
 
     # Fire and forget - we don't want signup to fail if sheets is down
@@ -60,6 +62,13 @@ async def create_signup(db: AsyncSession, payload: WaitlistCreate) -> WaitlistSi
         # Log error but don't fail the signup request
         # You could use proper logging here
         print(f"Warning: Failed to write to Google Sheets: {e}")
+
+    # Send the same lead to GoHighLevel without making CRM availability
+    # a prerequisite for accepting the signup into our database.
+    try:
+        await create_waitlist_contact(signup_dict)
+    except Exception as e:
+        print(f"Warning: Failed to write to GoHighLevel: {e}")
 
     return signup
 

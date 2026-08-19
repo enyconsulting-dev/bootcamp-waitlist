@@ -32,6 +32,11 @@ class Settings(BaseSettings):
     # --- Admin (for the stats/export endpoints built later) ---
     ADMIN_API_KEY: str = "change-me-in-production"
 
+    # --- GoHighLevel CRM ---
+    # Optional locally; set both values in Render to enable lead delivery.
+    GHL_PRIVATE_INTEGRATION_TOKEN: str | None = None
+    GHL_LOCATION_ID: str | None = None
+
     @property
     def allowed_origins_list(self) -> list[str]:
         return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
