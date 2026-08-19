@@ -16,7 +16,8 @@ export default function Hero() {
   const pricing = getPricingInfo(region);
 
   useEffect(() => {
-    const targetDate = new Date("September 1, 2026 00:00:00 WAT"); // WAT = UTC+1
+    const doorsOpenDate = import.meta.env.VITE_DOORS_OPEN_DATE?.trim() || "2026-09-01T00:50:00Z";
+    const targetDate = new Date(doorsOpenDate);
 
     const updateTimer = () => {
       const now = new Date();
