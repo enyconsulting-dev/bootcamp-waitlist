@@ -93,7 +93,7 @@ export default function Hero() {
         </div>
 
         {/* Main Headline - Premium */}
-        <h1 
+        <h1
           style={{
             marginTop: "1rem",
             marginBottom: "0",
@@ -107,7 +107,7 @@ export default function Hero() {
         >
           You Have The Expertise.
           <br />
-          <span style={{ color: "#C9A227" }}>You're Just Missing The Offer.</span>
+          <span className="hero-gold-text">You're Just Missing The Offer.</span>
         </h1>
 
         {/* Subhead - Premium */}

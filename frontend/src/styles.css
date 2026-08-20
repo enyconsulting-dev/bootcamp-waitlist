@@ -9,7 +9,7 @@
   --gold-default: #C9A227;
   --gold-light: #E4C767;
   --gold-dark: #9C7C1A;
-  
+
   /* Legacy (kept for compatibility) */
   --navy: #0B1020;
   --navy-deep: #0B1020;
@@ -469,4 +469,8 @@ img {
     padding-left: 0.45rem;
     padding-right: 0.45rem;
   }
+}
+
+.page-shell > section:not(.optin-section) span.hero-gold-text {
+  color: var(--gold-default) !important;
 }
