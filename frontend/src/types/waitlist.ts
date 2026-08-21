@@ -24,6 +24,11 @@ export interface WaitlistStats {
   usd_audience: number;
 }
 
+export interface ApiValidationError {
+  loc?: Array<string | number>;
+  msg?: string;
+}
+
 export interface ApiErrorResponse {
-  detail: string;
+  detail: string | ApiValidationError[];
 }

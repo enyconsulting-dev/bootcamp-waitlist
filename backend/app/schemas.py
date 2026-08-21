@@ -5,6 +5,7 @@ Keep these in sync with frontend/src/types/waitlist.ts.
 """
 import uuid
 from datetime import datetime
+import re
 
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
@@ -29,7 +30,7 @@ class WaitlistCreate(BaseModel):
     def basic_phone_shape(cls, v):
         # Deliberately loose here — full validation (phonenumbers lib) is a Phase 2 item,
         # see INSTRUCTIONS_FOR_AI_AGENT.md. This just blocks obvious junk input.
-        cleaned = v.strip().replace(" ", "")
+        cleaned = re.sub(r"[\s().-]", "", v.strip())
         digits_only = cleaned.lstrip("+")
         if not digits_only.isdigit():
             raise ValueError("WhatsApp number must contain only digits (and an optional leading +).")

@@ -29,7 +29,12 @@ export async function joinWaitlist(data: WaitlistFormData): Promise<WaitlistResp
 
   if (!response.ok) {
     const errorBody = (await response.json().catch(() => null)) as ApiErrorResponse | null;
-    const message = errorBody?.detail ?? "Something went wrong. Please try again.";
+    const message = Array.isArray(errorBody?.detail)
+      ? errorBody.detail.map((error) => {
+          const field = error.loc?.at(-1);
+          return field ? `${String(field)}: ${error.msg ?? "Invalid value"}` : error.msg ?? "Invalid value";
+        }).join(" ")
+      : errorBody?.detail ?? "Something went wrong. Please try again.";
     throw new WaitlistApiError(message, response.status);
   }
 
