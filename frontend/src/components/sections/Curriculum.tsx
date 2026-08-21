@@ -63,9 +63,9 @@ export default function Curriculum() {
         paddingRight: "1.5rem"
       }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto curriculum-content">
         {/* Section Label */}
-        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
+        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 curriculum-label"
           style={{
             backgroundColor: "rgba(201, 162, 39, 0.12)",
             color: "#C9A227",
@@ -80,7 +80,7 @@ export default function Curriculum() {
         </div>
 
         {/* Section Headline */}
-        <h2 className="mt-6 max-w-3xl text-3xl font-bold leading-tight lg:text-4xl"
+        <h2 className="mt-6 max-w-3xl text-3xl font-bold leading-tight lg:text-4xl curriculum-title"
           style={{
             fontFamily: "'Fraunces', serif",
             color: "#0B1020",
@@ -92,7 +92,7 @@ export default function Curriculum() {
         </h2>
 
         {/* Section Subhead */}
-        <p className="mt-6 max-w-2xl text-lg text-ink"
+        <p className="mt-6 max-w-2xl text-lg text-ink curriculum-intro"
           style={{
             fontFamily: "'Inter', sans-serif",
             color: "#111a33",
@@ -115,7 +115,7 @@ export default function Curriculum() {
           {weeks.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-8 border border-gray-200"
+              className="bg-white rounded-lg p-8 border border-gray-200 curriculum-card"
               style={{
                 backgroundColor: "#FFFFFF",
                 borderRadius: "12px",

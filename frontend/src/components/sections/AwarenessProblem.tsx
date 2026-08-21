@@ -11,9 +11,9 @@ export default function AwarenessProblem() {
         paddingRight: "1.5rem"
       }}
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto awareness-content">
         {/* Section Label */}
-        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
+        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 awareness-label"
           style={{
             backgroundColor: "rgba(201, 162, 39, 0.12)",
             color: "#C9A227",
@@ -264,7 +264,7 @@ export default function AwarenessProblem() {
           {/* Inline CTA */}
           <div style={{ marginTop: "2rem" }}>
             <a href="#waitlist-form"
-              className="inline-block text-white font-medium transition-all"
+              className="inline-block text-white font-medium transition-all awareness-cta"
               style={{
                 backgroundColor: "#C9A227",
                 color: "#FFFFFF",

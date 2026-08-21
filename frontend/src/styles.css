@@ -474,3 +474,43 @@ img {
 .page-shell > section:not(.optin-section) span.hero-gold-text {
   color: var(--gold-default) !important;
 }
+
+.awareness-content,
+.curriculum-content {
+  text-align: center;
+}
+
+.awareness-label,
+.curriculum-label {
+  display: inline-flex;
+}
+
+.awareness-content .awareness-cta {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.curriculum-title,
+.curriculum-intro {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.curriculum-card {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(201, 162, 39, 0.2) !important;
+  box-shadow: 0 16px 36px -22px rgba(11, 16, 32, 0.5) !important;
+}
+
+.curriculum-card::before {
+  background: linear-gradient(90deg, var(--gold-default), transparent);
+  content: "";
+  height: 3px;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
