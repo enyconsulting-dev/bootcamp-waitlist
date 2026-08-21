@@ -11,7 +11,7 @@ export default function ThePromise() {
         paddingRight: "1.5rem"
       }}
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center promise-content">
         {/* Section Label */}
         <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
           style={{
@@ -28,7 +28,7 @@ export default function ThePromise() {
         </div>
 
         {/* Section Headline */}
-        <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight lg:text-4xl mx-auto"
+        <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight lg:text-4xl mx-auto promise-heading"
           style={{
             fontFamily: "'Fraunces', serif",
             color: "#FFFFFF",
@@ -64,7 +64,7 @@ export default function ThePromise() {
         </p>
 
         {/* Checklist */}
-        <div className="mt-10 space-y-4 max-w-2xl mx-auto text-left pl-8">
+        <div className="mt-10 space-y-4 max-w-2xl mx-auto text-left promise-checklist">
           <div className="flex items-start">
             <div className="flex-shrink-0 w-5 h-5 rounded-full mt-0.5 flex items-center justify-center flex-shrink-0"
               style={{
@@ -255,7 +255,7 @@ export default function ThePromise() {
         {/* Inline CTA */}
         <div style={{ marginTop: "2rem" }}>
           <a href="#waitlist-form"
-            className="inline-block text-ink font-medium transition-all"
+            className="inline-block text-ink font-medium transition-all promise-cta"
             style={{
               backgroundColor: "#C9A227",
               color: "#0B1020",

@@ -514,3 +514,26 @@ img {
   right: 0;
   top: 0;
 }
+
+.promise-content {
+  text-align: center;
+}
+
+.promise-heading {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+.promise-checklist {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0;
+}
+
+.promise-cta {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
