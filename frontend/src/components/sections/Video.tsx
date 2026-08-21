@@ -68,7 +68,7 @@ export default function Video() {
             lineHeight: "1.8"
           }}
         >
-          Eno recorded a short message explaining exactly who this bootcamp is for, what you'll build, and why joining the waitlist is your smartest next move. Watch the 3-minute video below.
+          Eno recorded a short message explaining exactly who this bootcamp is for, what you'll build, and why joining the waitlist is your smartest next move. Watch the video below.
         </p>
 
         {/* Video Container - Enhanced */}
@@ -77,11 +77,12 @@ export default function Video() {
             marginTop: "3rem",
             marginBottom: "0",
             display: "flex",
-            justifyContent: "center"
+            justifyContent: "center",
+            width: "100%"
           }}
         >
           <iframe
-            src="https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/preview"
+            src="https://player.vimeo.com/video/1218920431?title=0&byline=0&portrait=0&dnt=1"
             style={{
               position: "relative",
               width: "100%",
@@ -102,9 +103,10 @@ export default function Video() {
               e.currentTarget.style.boxShadow = "0 20px 60px -10px rgba(11, 16, 32, 0.25)";
               e.currentTarget.style.transform = "translateY(0)";
             }}
-            allow="autoplay; encrypted-media"
+            allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
-            title="Eno's Message"
+            loading="lazy"
+            title="Eno's message about the 30-Day Consulting Offer Bootcamp"
           />
         </div>
 
