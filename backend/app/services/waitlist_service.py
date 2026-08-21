@@ -3,6 +3,8 @@
 Business logic for waitlist signups, kept separate from the route handler
 so it's independently testable and reusable (e.g. by a future admin CLI or import script).
 """
+import asyncio
+
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -18,6 +20,19 @@ class DuplicateEmailError(Exception):
     def __init__(self, email: str):
         self.email = email
         super().__init__(f"Email already on waitlist: {email}")
+
+
+async def _sync_signup_integrations(signup_dict: dict[str, str]) -> None:
+    """Sync external services without delaying the signup response."""
+    try:
+        await asyncio.to_thread(append_waitlist_to_sheet, signup_dict)
+    except Exception as e:
+        print(f"Warning: Failed to write to Google Sheets: {e}")
+
+    try:
+        await create_waitlist_contact(signup_dict)
+    except Exception as e:
+        print(f"Warning: Failed to write to GoHighLevel: {e}")
 
 
 async def get_by_email(db: AsyncSession, email: str) -> WaitlistSignup | None:
@@ -44,8 +59,8 @@ async def create_signup(db: AsyncSession, payload: WaitlistCreate) -> WaitlistSi
     await db.commit()
     await db.refresh(signup)
 
-    # --- NEW: ALSO WRITE TO GOOGLE SHEETS ---
-    # Convert SQLAlchemy object to dict for sheets integration
+    # External integrations run after the response path so a slow provider
+    # cannot leave the registration button waiting.
     signup_dict = {
         "first_name": signup.first_name,
         "last_name": signup.last_name,
@@ -54,21 +69,7 @@ async def create_signup(db: AsyncSession, payload: WaitlistCreate) -> WaitlistSi
         "whatsapp_number": signup.whatsapp_number,
         "currency_tag": signup.currency_tag,
     }
-
-    # Fire and forget - we don't want signup to fail if sheets is down
-    try:
-        append_waitlist_to_sheet(signup_dict)
-    except Exception as e:
-        # Log error but don't fail the signup request
-        # You could use proper logging here
-        print(f"Warning: Failed to write to Google Sheets: {e}")
-
-    # Send the same lead to GoHighLevel without making CRM availability
-    # a prerequisite for accepting the signup into our database.
-    try:
-        await create_waitlist_contact(signup_dict)
-    except Exception as e:
-        print(f"Warning: Failed to write to GoHighLevel: {e}")
+    asyncio.create_task(_sync_signup_integrations(signup_dict))
 
     return signup
 
