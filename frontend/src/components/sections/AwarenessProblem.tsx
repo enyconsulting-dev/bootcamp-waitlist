@@ -98,7 +98,7 @@ export default function AwarenessProblem() {
           <p className="text-lg text-ink leading-relaxed"
             style={{
               fontFamily: "'Inter', sans-serif",
-              color: "#111a33",
+              color: "#d2d7e4",
               fontSize: "18px",
               lineHeight: "1.8"
             }}
@@ -110,7 +110,7 @@ export default function AwarenessProblem() {
             style={{
               fontFamily: "'Fraunces', serif",
               fontWeight: "700",
-              color: "#0B1020",
+              color: "#d2d7e4",
               fontSize: "1.875rem"
             }}
           >
@@ -120,7 +120,7 @@ export default function AwarenessProblem() {
           <p className="text-lg text-ink leading-relaxed"
             style={{
               fontFamily: "'Inter', sans-serif",
-              color: "#111a33",
+              color: "#d2d7e4",
               fontSize: "18px",
               lineHeight: "1.8"
             }}
@@ -131,7 +131,7 @@ export default function AwarenessProblem() {
           <p className="text-lg text-ink leading-relaxed"
             style={{
               fontFamily: "'Inter', sans-serif",
-              color: "#111a33",
+              color: "#d2d7e4",
               fontSize: "18px",
               lineHeight: "1.8"
             }}
@@ -154,7 +154,7 @@ export default function AwarenessProblem() {
               <div className="ml-4 text-ink"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  color: "#111a33",
+                  color: "#d2d7e4",
                   fontSize: "18px",
                   lineHeight: "1.8"
                 }}
@@ -175,7 +175,7 @@ export default function AwarenessProblem() {
               <div className="ml-4 text-ink"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  color: "#111a33",
+                  color: "#d2d7e4",
                   fontSize: "18px",
                   lineHeight: "1.8"
                 }}
@@ -196,7 +196,7 @@ export default function AwarenessProblem() {
               <div className="ml-4 text-ink"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  color: "#111a33",
+                  color: "#d2d7e4",
                   fontSize: "18px",
                   lineHeight: "1.8"
                 }}
