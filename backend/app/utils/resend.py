@@ -28,10 +28,11 @@ async def send_waitlist_confirmation(signup_data: dict[str, Any]) -> bool:
         "subject": "You're on the 30-Day Consulting Offer Bootcamp waitlist",
         "html": f"""
         <div style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #0B1020; max-width: 600px;\">
-          <h1 style=\"color: #9C7C1A;\">You're on the waitlist, {first_name}.</h1>
-          <p>Thanks for joining the 30-Day Consulting Offer Bootcamp waitlist.</p>
-          <p>We'll email you when doors open with early access and the lowest available price.</p>
-          <p>We're glad to have you with us.</p>
+          <h1 style=\"color: #9C7C1A;\">Hi, {first_name}.</h1>
+          <p>You’re officially on the waitlist!</p>
+          <p>Once enrollment opens, we’ll send you an email with the details you need to secure your <b>50% Early Bird Offer.</b></p>
+          <p>Keep an eye on your inbox so you don’t miss your chance to join us at the early-bird price!.</p>
+          <p>Business Analysis School</p>
         </div>
         """,
     }
