@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     # "http://localhost:5173,https://bootcamp-waitlist.vercel.app"
     ALLOWED_ORIGINS: str = "http://localhost:5173"
     ALLOWED_ORIGIN_REGEX: str = (
-        r"https://([a-z0-9-]+\.)?vercel\.app$|"
+        r"https://.*\.vercel\.app$|"
         r"https://(www\.)?businessanalysisschool\.com$"
     )
 
@@ -55,6 +55,14 @@ class Settings(BaseSettings):
     @property
     def allowed_origins_list(self) -> list[str]:
         return [origin.strip().rstrip("/") for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
+
+    @property
+    def allowed_origin_regex(self) -> str:
+        # An empty Render variable must not silently disable production CORS.
+        return self.ALLOWED_ORIGIN_REGEX.strip() or (
+            r"https://.*\.vercel\.app$|"
+            r"https://(www\.)?businessanalysisschool\.com$"
+        )
 
     @property
     def is_production(self) -> bool:
