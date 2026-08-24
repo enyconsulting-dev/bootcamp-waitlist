@@ -29,6 +29,10 @@ class Settings(BaseSettings):
     # Comma-separated list of allowed frontend origins, e.g.:
     # "http://localhost:5173,https://bootcamp-waitlist.vercel.app"
     ALLOWED_ORIGINS: str = "http://localhost:5173"
+    ALLOWED_ORIGIN_REGEX: str = (
+        r"https://([a-z0-9-]+\.)?vercel\.app$|"
+        r"https://(www\.)?businessanalysisschool\.com$"
+    )
 
     # --- Admin (for the stats/export endpoints built later) ---
     ADMIN_API_KEY: str = "change-me-in-production"
@@ -50,7 +54,7 @@ class Settings(BaseSettings):
 
     @property
     def allowed_origins_list(self) -> list[str]:
-        return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
+        return [origin.strip().rstrip("/") for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
 
     @property
     def is_production(self) -> bool:
