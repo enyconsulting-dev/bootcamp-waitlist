@@ -110,10 +110,8 @@ p { line-height: 1.7; }
 .reason-list span { color: #9c7c1a; font-family: "Space Grotesk", sans-serif; font-weight: 700; }
 .reason-list p { margin: 0; color: var(--ink-soft); }
 .testimonial-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-.testimonial-slot { display: grid; place-items: center; aspect-ratio: 4/3; padding: 1rem; border: 1px dashed rgba(16,26,43,.25); border-radius: 6px; color: var(--muted); background: var(--paper-deep); text-align: center; }
-.testimonial-slot span, .testimonial-slot small { display: block; }
-.testimonial-slot span { font-family: "Space Grotesk", sans-serif; font-weight: 600; }
-.testimonial-slot small { margin-top: .5rem; font-size: .72rem; }
+.testimonial-slot { overflow: hidden; aspect-ratio: 4/3; margin: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--paper-deep); }
+.testimonial-slot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .profile-card { display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem; padding: 1.5rem; border-color: var(--white-line); background: rgba(255,255,255,.06); }
 .profile-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px; }
