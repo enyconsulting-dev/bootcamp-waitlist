@@ -78,7 +78,7 @@ export default function WaitlistForm() {
             color: "#0B1020"
           }}
         >
-          You're On The Waitlist!
+          You’re On the Waitlist!
         </h2>
         <p
           style={{
@@ -89,7 +89,7 @@ export default function WaitlistForm() {
             lineHeight: "1.7"
           }}
         >
-          Check your email and WhatsApp on September 1st for your exclusive early-bird enrollment link.
+          No payment now. Your early access, lowest price, and bonus are locked in.
         </p>
       </div>
     );
@@ -254,7 +254,7 @@ export default function WaitlistForm() {
               fontStyle: "italic"
             }}
           >
-            We'll send your enrollment link here on September 1st.
+            Your early-bird enrollment link will arrive here first.
           </p>
         </div>
 
@@ -321,7 +321,7 @@ export default function WaitlistForm() {
               fontStyle: "italic"
             }}
           >
-            This ensures you get the right pricing and enrollment timing.
+            We use this to send the right pricing and enrollment details.
           </p>
         </div>
 
@@ -379,7 +379,7 @@ export default function WaitlistForm() {
               fontStyle: "italic"
             }}
           >
-            Your early-bird reminder will come here on September 1st. No spam.
+            Your early-bird reminder will come here first. No spam.
           </p>
         </div>
       </div>
@@ -399,7 +399,7 @@ export default function WaitlistForm() {
             fontSize: "14px"
           }}
         >
-          This email is already on the waitlist. You'll get your early-bird enrollment link on September 1st.
+          This email is already on the waitlist. You’ll receive early access when enrollment opens.
         </div>
       )}
       {submitState === "error" && (
@@ -458,7 +458,7 @@ export default function WaitlistForm() {
           e.currentTarget.style.transform = "translateY(0)";
         }}
       >
-        {submitState === "submitting" ? "🔄 Joining..." : "✓ Join the Waitlist — It's Free"}
+        {submitState === "submitting" ? "Joining..." : "⚡ Join the Waitlist — It’s Free"}
       </button>
 
       {/* Legal Text */}
@@ -473,9 +473,9 @@ export default function WaitlistForm() {
           textAlign: "center"
         }}
       >
-        By joining, you agree to receive emails and WhatsApp messages about the 30-Day Consulting Offer Bootcamp.
+        No payment now. No obligation. Just early access, the best price, and your bonus.
         <br />
-        Your information is safe and will never be sold or shared.
+        Your information is private and will never be shared.
       </p>
     </form>
   );

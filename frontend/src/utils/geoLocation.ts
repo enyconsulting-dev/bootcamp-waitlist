@@ -16,10 +16,10 @@ export interface PricingInfo {
 // Geo - pricing information for different regions
 const PRICES = {
   NGN: {
-    amount: 26875,
+    amount: 25000,
     currency: "NGN",
     currencySymbol: "₦",
-    label: "₦26,875 NGN",
+    label: "₦25,000 NGN",
     paymentUrl: import.meta.env.VITE_PAYMENT_URL_NAIRA || "https://paystack.shop/pay/hu7b8rhhk1"
   },
   USD: {

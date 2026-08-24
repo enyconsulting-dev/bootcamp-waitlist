@@ -16,13 +16,7 @@ export function CountdownTimer() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const doorsOpenDateStr = import.meta.env.VITE_DOORS_OPEN_DATE?.trim();
-
-    // Validate environment variable
-    if (!doorsOpenDateStr) {
-      setError("Countdown timer configuration missing: VITE_DOORS_OPEN_DATE not set");
-      return;
-    }
+    const doorsOpenDateStr = import.meta.env.VITE_DOORS_OPEN_DATE?.trim() || "2026-09-01T00:00:00Z";
 
     const targetDate = new Date(doorsOpenDateStr);
 
