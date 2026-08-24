@@ -13,6 +13,7 @@ from app.schemas import WaitlistCreate, WaitlistStats
 from app.utils.country_currency import NGN_AUDIENCE, USD_AUDIENCE, resolve_currency_tag
 from app.utils.ghl import create_waitlist_contact
 from app.utils.google_sheets import append_waitlist_to_sheet
+from app.utils.resend import send_waitlist_confirmation
 
 
 class DuplicateEmailError(Exception):
@@ -24,15 +25,23 @@ class DuplicateEmailError(Exception):
 
 async def _sync_signup_integrations(signup_dict: dict[str, str]) -> None:
     """Sync external services without delaying the signup response."""
-    try:
-        await asyncio.to_thread(append_waitlist_to_sheet, signup_dict)
-    except Exception as e:
-        print(f"Warning: Failed to write to Google Sheets: {e}")
+    async def sync_sheets() -> None:
+        try:
+            await asyncio.to_thread(append_waitlist_to_sheet, signup_dict)
+        except Exception as e:
+            print(f"Warning: Failed to write to Google Sheets: {e}")
 
-    try:
-        await create_waitlist_contact(signup_dict)
-    except Exception as e:
-        print(f"Warning: Failed to write to GoHighLevel: {e}")
+    async def sync_ghl() -> None:
+        try:
+            await create_waitlist_contact(signup_dict)
+        except Exception as e:
+            print(f"Warning: Failed to write to GoHighLevel: {e}")
+
+    await asyncio.gather(
+        sync_sheets(),
+        sync_ghl(),
+        send_waitlist_confirmation(signup_dict),
+    )
 
 
 async def get_by_email(db: AsyncSession, email: str) -> WaitlistSignup | None:

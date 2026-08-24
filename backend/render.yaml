@@ -22,3 +22,7 @@ services:
         sync: false
       - key: GHL_LOCATION_ID
         sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        sync: false

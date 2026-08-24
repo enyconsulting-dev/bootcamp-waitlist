@@ -4,6 +4,7 @@ Central app configuration. Loads from environment variables / .env file.
 Never hardcode secrets here — this file only defines WHERE to read them from.
 """
 from functools import lru_cache
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings
 
 
@@ -36,6 +37,16 @@ class Settings(BaseSettings):
     # Optional locally; set both values in Render to enable lead delivery.
     GHL_PRIVATE_INTEGRATION_TOKEN: str | None = None
     GHL_LOCATION_ID: str | None = None
+
+    # --- Email (Resend) ---
+    RESEND_API_KEY: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("RESEND_API_KEY", "Resend_API_KEY"),
+    )
+    RESEND_FROM_EMAIL: str = Field(
+        default="hello@businessanalysisschool.com",
+        validation_alias=AliasChoices("RESEND_FROM_EMAIL", "Resend_FROM_EMAIL"),
+    )
 
     @property
     def allowed_origins_list(self) -> list[str]:
