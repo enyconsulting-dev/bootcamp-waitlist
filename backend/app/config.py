@@ -51,6 +51,10 @@ class Settings(BaseSettings):
         default="hello@businessanalysisschool.com",
         validation_alias=AliasChoices("RESEND_FROM_EMAIL", "Resend_FROM_EMAIL"),
     )
+    RESEND_FROM_NAME: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("RESEND_FROM_NAME", "Resend_FROM_NAME"),
+    )
 
     @property
     def allowed_origins_list(self) -> list[str]:

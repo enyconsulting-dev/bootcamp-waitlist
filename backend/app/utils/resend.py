@@ -22,8 +22,16 @@ async def send_waitlist_confirmation(signup_data: dict[str, Any]) -> bool:
         return False
 
     first_name = signup_data.get("first_name", "there")
+    # Resolve the sender email (ensuring it contains @)
+    sender_email = _sender_address(settings.RESEND_FROM_EMAIL)
+    # Build the From header with optional name
+    if settings.RESEND_FROM_NAME:
+        from_header = f'"{settings.RESEND_FROM_NAME}" <{sender_email}>'
+    else:
+        from_header = sender_email
+
     payload = {
-        "from": _sender_address(settings.RESEND_FROM_EMAIL),
+        "from": from_header,
         "to": [signup_data.get("email", "")],
         "subject": "You're on the 30-Day Consulting Offer Bootcamp waitlist",
         "html": f"""
