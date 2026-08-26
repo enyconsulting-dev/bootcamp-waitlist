@@ -42,7 +42,7 @@ export function Hero() {
 }
 
 export function Video() {
-  return <section className="section section-paper"><div className="content-narrow"><SectionIntro eyebrow="A message from Eno" title="See what you’ll build in 30 days." copy="A short introduction to the bootcamp, the offer you’ll create, and why the waitlist is your smartest next move." light /><div className="video-frame"><iframe src="https://player.vimeo.com/video/1218920431?title=0&byline=0&portrait=0&dnt=1" title="Eno's message about the 30-Day Consulting Offer Bootcamp" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen loading="lazy" /></div></div></section>;
+  return <section className="section section-paper"><div className="content-narrow"><SectionIntro eyebrow="A message from Eno" title="See what you’ll build in 30 days." copy="A short introduction to the bootcamp, the offer you’ll create, and why the waitlist is your smartest next move." light /><div className="video-frame"><iframe src="https://vimeo.com/1218958639?share=copy&fl=sv&fe=ci " title="Eno's message about the 30-Day Consulting Offer Bootcamp" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen loading="lazy" /></div></div></section>;
 }
 
 export function OptIn() {

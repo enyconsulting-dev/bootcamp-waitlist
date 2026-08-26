@@ -82,7 +82,7 @@ export default function Video() {
           }}
         >
           <iframe
-            src="https://player.vimeo.com/video/1218920431?title=0&byline=0&portrait=0&dnt=1"
+            src="https://vimeo.com/1218958639?share=copy&fl=sv&fe=ci "
             style={{
               position: "relative",
               width: "100%",
