@@ -1,6 +1,5 @@
 README.md
 node_modules/
-.env
 INSTRUCTIONS_FOR_AI_AGENT.md
 frontend.log
 backend/server.log
@@ -14,3 +13,4 @@ UI_Modification.md
 
 
 python3 -c 'import json; open("google-credentials-oneline.txt","w").write(json.dumps(json.load(open("google-credentials.json"))))'
+config.bat

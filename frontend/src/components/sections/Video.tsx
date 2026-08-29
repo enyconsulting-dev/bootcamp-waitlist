@@ -1,6 +1,9 @@
 // /home/obed/Documents/bootcamp-waitlist/frontend/src/components/sections/Video.tsx
 // PHASE 5B: Enhanced Video Section with Premium Styling
 
+const googleDriveVideoUrl = "https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/preview";
+const googleDriveFileUrl = "https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/view?usp=drive_link";
+
 export default function Video() {
   return (
     <section
@@ -13,7 +16,6 @@ export default function Video() {
       }}
     >
       <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto", textAlign: "center" }}>
-        {/* Section Label */}
         <div
           style={{
             display: "inline-flex",
@@ -36,7 +38,6 @@ export default function Video() {
           📹 A Message From Eno
         </div>
 
-        {/* Section Headline */}
         <h2
           style={{
             marginTop: "1rem",
@@ -54,7 +55,6 @@ export default function Video() {
           Before You Scroll—Watch This First.
         </h2>
 
-        {/* Section Subhead */}
         <p
           style={{
             marginTop: "1rem",
@@ -68,50 +68,60 @@ export default function Video() {
             lineHeight: "1.8"
           }}
         >
-          Eno recorded a short message explaining exactly who this bootcamp is for, what you'll build, and why joining the waitlist is your smartest next move. Watch the video below.
+          Eno recorded a short message explaining exactly who this bootcamp is for, what you’ll build, and why joining the waitlist is your smartest next move.
         </p>
 
-        {/* Video Container - Enhanced */}
         <div
           style={{
-            marginTop: "3rem",
+            marginTop: "2.5rem",
             marginBottom: "0",
-            display: "flex",
-            justifyContent: "center",
-            width: "100%"
+            padding: "0.75rem",
+            borderRadius: "20px",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246, 240, 223, 0.85))",
+            boxShadow: "0 20px 45px -18px rgba(15, 23, 42, 0.32)",
+            border: "1px solid rgba(15, 23, 42, 0.08)"
           }}
         >
-          <iframe
-            src="https://player.vimeo.com/video/1218920431?title=0&byline=0&portrait=0&dnt=1"
+          <div
             style={{
-              position: "relative",
-              width: "100%",
-              maxWidth: "800px",
-              aspectRatio: "16 / 9",
-              borderRadius: "14px",
-              overflow: "hidden",
-              boxShadow: "0 20px 60px -10px rgba(11, 16, 32, 0.25)",
-              transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
-              cursor: "pointer",
-              border: "none"
+              display: "flex",
+              justifyContent: "center",
+              width: "100%"
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = "0 30px 80px -10px rgba(11, 16, 32, 0.35)";
-              e.currentTarget.style.transform = "translateY(-6px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "0 20px 60px -10px rgba(11, 16, 32, 0.25)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-            title="Eno's message about the 30-Day Consulting Offer Bootcamp"
-          />
+          >
+            <iframe
+              src={googleDriveVideoUrl}
+              style={{
+                position: "relative",
+                width: "100%",
+                maxWidth: "800px",
+                aspectRatio: "16 / 9",
+                borderRadius: "14px",
+                overflow: "hidden",
+                boxShadow: "0 20px 60px -10px rgba(11, 16, 32, 0.25)",
+                transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                cursor: "pointer",
+                border: "none",
+                backgroundColor: "#0B1020"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 30px 80px -10px rgba(11, 16, 32, 0.35)";
+                e.currentTarget.style.transform = "translateY(-6px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 20px 60px -10px rgba(11, 16, 32, 0.25)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Eno's message about the 30-Day Consulting Offer Bootcamp"
+            />
+          </div>
         </div>
 
-        {/* CTA Button - Gold */}
-        <div style={{ marginTop: "2.5rem", marginBottom: "0" }}>
+        <div style={{ marginTop: "1.25rem", display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0.75rem" }}>
           <a
             href="#waitlist-form"
             style={{
@@ -147,9 +157,39 @@ export default function Video() {
           >
             Join Free Waitlist — Then Watch
           </a>
+          <a
+            href={googleDriveFileUrl}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingTop: "1rem",
+              paddingBottom: "1rem",
+              paddingLeft: "1.5rem",
+              paddingRight: "1.5rem",
+              backgroundColor: "transparent",
+              color: "#0B1020",
+              border: "1px solid rgba(11, 16, 32, 0.2)",
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: "600",
+              fontSize: "14px",
+              textDecoration: "none",
+              borderRadius: "8px",
+              transition: "all 0.3s ease"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(11, 16, 32, 0.04)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+            }}
+          >
+            Open in Google Drive
+          </a>
         </div>
 
-        {/* Micro-copy */}
         <p
           style={{
             marginTop: "1rem",
@@ -164,7 +204,6 @@ export default function Video() {
         </p>
       </div>
 
-      {/* CSS for Pulse Animation */}
       <style>{`
         @keyframes pulse-glow {
           0%, 100% {
