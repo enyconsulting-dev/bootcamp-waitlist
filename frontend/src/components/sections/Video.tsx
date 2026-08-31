@@ -1,8 +1,8 @@
 // /home/obed/Documents/bootcamp-waitlist/frontend/src/components/sections/Video.tsx
 // PHASE 5B: Enhanced Video Section with Premium Styling
 
-const googleDriveVideoUrl = "https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/preview";
-const googleDriveFileUrl = "https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/view?usp=drive_link";
+const vimeoVideoUrl = "https://player.vimeo.com/video/1218920431?title=0&byline=0&portrait=0&badge=0&controls=1";
+const vimeoShareUrl = "https://vimeo.com/1218920431?share=copy&fl=sv&fe=ci";
 
 export default function Video() {
   return (
@@ -90,7 +90,7 @@ export default function Video() {
             }}
           >
             <iframe
-              src={googleDriveVideoUrl}
+              src={vimeoVideoUrl}
               style={{
                 position: "relative",
                 width: "100%",
@@ -112,7 +112,7 @@ export default function Video() {
                 e.currentTarget.style.boxShadow = "0 20px 60px -10px rgba(11, 16, 32, 0.25)";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
-              allow="autoplay; fullscreen; picture-in-picture"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               allowFullScreen
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -158,7 +158,7 @@ export default function Video() {
             Join Free Waitlist — Then Watch
           </a>
           <a
-            href={googleDriveFileUrl}
+            href={vimeoShareUrl}
             target="_blank"
             rel="noreferrer"
             style={{
@@ -186,7 +186,7 @@ export default function Video() {
               e.currentTarget.style.backgroundColor = "transparent";
             }}
           >
-            Open in Google Drive
+            
           </a>
         </div>
 

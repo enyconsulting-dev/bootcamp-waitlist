@@ -41,8 +41,8 @@ export function Hero() {
   return <section className="hero section-dark"><div className="hero-grid"><div className="hero-copy"><span className="eyebrow">The 30-Day Consulting Offer Bootcamp · Doors Open September 1</span><h1>Turn Your Expertise Into a Consulting Offer <em>That Lands Clients</em> — in 30 Days.</h1><p className="hero-lede">You’ve got the experience. You’ve got the expertise. Now let’s package it into a consulting offer that actually wins clients — with daily trainings, daily tasks, and live coaching every Saturday.</p><p className="hero-note">Join the free waitlist to lock in 48-hour early-bird pricing before anyone else.</p><CTA /></div><div className="hero-side"><div className="countdown-card"><span className="card-label">Until enrollment opens</span><CountdownTimer /><p>September 1, 2026</p></div><div className="hero-stats"><div><strong>100,000+</strong><span>Trained</span></div><div><strong>90+</strong><span>Countries</span></div><div><strong>95%</strong><span>Success rate</span></div></div></div></div></section>;
 }
 
-const googleDriveVideoUrl = "https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/preview";
-const googleDriveFileUrl = "https://drive.google.com/file/d/13tuZ-INK7Aq8DZ5VI-4S9RaXz-p-ptW7/view?usp=drive_link";
+const vimeoVideoUrl = "https://player.vimeo.com/video/1218920431?title=0&byline=0&portrait=0&badge=0&controls=1";
+const vimeoShareUrl = "https://vimeo.com/1218920431?share=copy&fl=sv&fe=ci";
 
 export function Video() {
   return (
@@ -51,17 +51,15 @@ export function Video() {
         <SectionIntro eyebrow="A message from Eno" title="See what you’ll build in 30 days." copy="A short introduction to the bootcamp, the offer you’ll create, and why the waitlist is your smartest next move." light />
         <div className="video-frame" style={{ position: "relative" }}>
           <iframe
-            src={googleDriveVideoUrl}
+            src={vimeoVideoUrl}
             title="Eno's message about the 30-Day Consulting Offer Bootcamp"
-            allow="autoplay; fullscreen; picture-in-picture"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
           />
         </div>
-        <div className="video-actions" style={{ marginTop: "1rem", display: "flex", justifyContent: "center" }}>
-          <a href={googleDriveFileUrl} target="_blank" rel="noreferrer" className="button button-secondary">Open in Google Drive</a>
-        </div>
+        
       </div>
     </section>
   );
