@@ -42,7 +42,7 @@ export function Hero() {
 }
 
 const vimeoVideoUrl = "https://player.vimeo.com/video/1218920431?title=0&byline=0&portrait=0&badge=0&controls=1";
-const vimeoShareUrl = "https://vimeo.com/1218920431?share=copy&fl=sv&fe=ci";
+// const vimeoShareUrl = "https://vimeo.com/1218920431?share=copy&fl=sv&fe=ci";
 
 export function Video() {
   return (
